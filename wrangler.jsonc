@@ -1,0 +1,24 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "web",
+  "main": "src/index.js",
+  "compatibility_date": "2026-08-06",
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": true
+  },
+  "d1_databases": [
+    {
+      "binding": "sfl_analytics",
+      "database_name": "sfl_analytics",
+      "database_id": "e34e121e-1f37-485e-81ab-5f96a06ef1ab"
+    }
+  ],
+  "compatibility_flags": [
+    "nodejs_compat"
+  ]
+}

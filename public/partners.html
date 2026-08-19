@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <script>
+        // 强制 HTTPS 跳转 —— 兜底微信/QQ/抖音等不识别 HSTS 的内置浏览器
+        if (location.protocol === 'http:' && location.hostname !== 'localhost') {
+            location.replace('https://' + location.host + location.pathname + location.search + location.hash);
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no, email=no, address=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#0f172a">
+    <title>合作伙伴 - 极鱼社 Swift Fish Lab</title>
+    <meta name="description" content="极鱼社&合作伙伴 - 与众多优秀团队与社区携手共进，共同打造更优质的Minecraft体验">
+    <link rel="preload" as="style" href="style.min.css?v=93600b8">
+    <link rel="preload" as="image" href="images/sfllogo.webp">
+    <link rel="icon" href="images/sfllogo.webp">
+    <link rel="stylesheet" href="css/font-awesome.min.css?v=93600b8" media="print" onload="this.media='all';this.onload=null">
+    <link rel="stylesheet" href="style.min.css?v=93600b8">
+    <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+    <main>
+        <!-- 合作伙伴 Hero -->
+        <section class="partners-hero" id="partnersHero">
+            <div class="partners-hero-content">
+                <span class="eyebrow reveal">OUR PARTNERS</span>
+                <h1 class="reveal">携手共进 · <span>共创未来</span></h1>
+                <p class="reveal" style="--delay:0.1s">极鱼社与众多优秀的建筑团队、创作社区、技术平台保持深度合作，共同为玩家和创作者提供更优质的资源与服务。</p>
+            </div>
+        </section>
+
+        <!-- 合作伙伴列表 -->
+        <section class="partners-section" id="partners">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="section-tag">PARTNER SHOWCASE</span>
+                    <h2 class="section-title">合作伙伴</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-subtitle">感谢以下团队与组织与我们一路同行</p>
+                </div>
+                <div class="partners-grid" id="partnersGrid"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="common.min.js?v=93600b8"></script>
+    <script>
+        try { injectLayout('partners'); } catch(e) { console.warn('布局注入失败:', e); }
+        if (typeof SITE_DATA === 'undefined') { console.warn('common.js 未加载'); } else {
+
+        // 渲染合作伙伴卡片
+        (function() {
+            var grid = document.getElementById('partnersGrid');
+            if (!grid || !SITE_DATA.PARTNERS) return;
+            SITE_DATA.PARTNERS.forEach(function(p, idx) {
+                var card = document.createElement('a');
+                card.href = p.url || '#';
+                card.className = 'partner-card reveal';
+                card.target = '_blank';
+                card.rel = 'noopener';
+                card.style.setProperty('--delay', (idx * 0.08) + 's');
+                card.style.setProperty('--p-color', p.color || '#0ea5e9');
+                card.style.setProperty('--p-color-alpha', (p.color || '#0ea5e9') + '24');
+                var coverHtml = p.image
+                    ? '<img src="' + p.image + '" alt="' + p.name + '" loading="lazy" decoding="async" onerror="this.outerHTML=\'<div class=\\\'partner-cover-ph\\\'><i class=\\\'' + p.logo + '\\\'></i></div>\'">'
+                    : '<div class="partner-cover-ph"><i class="' + p.logo + '"></i></div>';
+                card.innerHTML =
+                    '<div class="partner-cover">' +
+                    '  <span class="partner-type">' + p.type + '</span>' +
+                    coverHtml +
+                    '</div>' +
+                    '<div class="partner-info">' +
+                    '  <h3>' + p.name + '</h3>' +
+                    '  <span class="partner-en">' + p.en + '</span>' +
+                    '  <p>' + p.desc + '</p>' +
+                    '  <span class="partner-link">了解合作详情 <i class="fa-solid fa-arrow-right"></i></span>' +
+                    '</div>';
+                grid.appendChild(card);
+            });
+        })();
+
+    } // 结束 SITE_DATA 守卫
+    </script>
+    <script src="script.min.js?v=93600b8"></script>
+</body>
+</html>
