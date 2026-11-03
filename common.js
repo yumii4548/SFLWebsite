@@ -1,11 +1,6 @@
-/**
- * 极鱼社官网 - 公共组件 & 数据配置
- * 通过 JS 动态注入导航栏和页脚，方便统一维护
- */
 (function (global) {
     'use strict';
 
-    // ===== 网站数据配置 =====
     var SITE = {
         name: '极鱼社',
         en: 'SwiftFishLab',
@@ -35,7 +30,8 @@
             { id: 'reserved-building-1', title: '长安唐大明宫', subtitle: 'Daming Palace', category: '古建筑组 · 尚国营建', desc: '完整还原长安唐代大明宫，大明宫，大唐帝国的大朝正宫，唐朝的政治中心和国家象征，位于唐京师长安（今西安）北侧的龙首原，是唐长安城三座主要宫殿“三大内”（大明宫、太极宫、兴庆宫）中规模最大的一座。', tags: ['#尚国营建', '#宫殿', '#唐宋'], icon: 'fa-hammer', image: 'images/daminggong.webp', author: '浔昇' },
             { id: 'reserved-building-2', title: '兰茶市6 · 古韵银江', subtitle: 'LACH City 6', category: '现代城市 · SHV团队', desc: '兰茶市是基于架空城市的基础上创作的一个拥有烟火气的小城，拥有丰富的地铁的线路、场景与彩蛋，近年来逐步更新，得到了很多MC中国版玩家的喜爱。', tags: ['#现代都市', '#架空', '#SHV团队'], icon: 'fa-city', image: 'images/lach.webp', author: 'SHV寻林' },
             { id: 'reserved-building-3', title: '明清风格明堂', subtitle: 'Ming and Qing style Mingtang', category: '古建筑组 · 明清建筑', desc: '原型参考武则天时期洛阳城核心建筑万象神宫（明堂），保留”上圆下方、三重通天”的核心形制，经体量缩放与明清风格化重构，用方块还原了一座兼具唐代格局与明清细节的中式建筑大观。', tags: ['#古建筑', '#明清', '#明堂'], icon: 'fa-hammer', image: 'images/mingtang.webp', isReserved: false, author: '亨升' },
-            { id: 'reserved-building-4', title: '希伦市', subtitle: 'Hilom City', category: '现代城市 · 云筑设计团队', desc: '希伦市是一座历经四代迭新、以现代都市为蓝本打造的架空城市，融合商业中心、交通枢纽与滨水景观，细节丰富布局考究，是云筑设计团队的又一力作。', tags: ['#现代都市', '#架空', '#云筑设计'], icon: 'fa-city', image: 'images/xls.webp', author: 'HOYSH' }
+            { id: 'reserved-building-4', title: '希伦市', subtitle: 'Hilom City', category: '现代城市 · 云筑设计团队', desc: '希伦市是一座历经四代迭新、以现代都市为蓝本打造的架空城市，融合商业中心、交通枢纽与滨水景观，细节丰富布局考究，是云筑设计团队的又一力作。', tags: ['#现代都市', '#架空', '#云筑设计'], icon: 'fa-city', image: 'images/xls.webp', author: 'HOYSH' },
+            { id: 'tiananmenguangchang', title: '北京天安门广场', subtitle: 'Tiananmen Square', category: '古建筑组 · 红色建筑', desc: '以方块按比例还原北京天安门广场，涵盖天安门城楼、人民英雄纪念碑、人民大会堂与国家博物馆等标志性建筑。广场中轴对称、气势磅礴，城楼红墙金瓦，是新中国形象的经典地标，也是明清古建与宏大城市规划相结合的匠心之作。', tags: ['#地标', '#广场', '#明清'], icon: 'fa-monument', image: 'images/tam.webp', author: '亨升' }
         ],
         maps: [
             { id: 'reserved-map-1', title: '杀戮迷宫', subtitle: 'Killing Labyrinth', category: '玩法地图 · 多人竞技', desc: '石砖构筑的巨大迷宫纵横交错，曲折通道暗藏杀机。踏入这片迷域，前路难辨方向，敌人潜伏拐角，唯有奋力厮杀，寻得出路方能存活。', tags: ['#多人对战', '#单人竞技', '#联机玩法'], icon: 'fa-map', image: 'images/slmg.webp', author: '挽留' },
@@ -114,42 +110,42 @@
 
     var PARTNERS = [
         { name: '上海熵联天创网络科技有限公司', en: 'Entropy Link Tianchuang', type: '合作组织', desc: '熵联天创，游戏开发团队，成立于2025年6月18日，致力于制作有趣好玩的作品，营造良好的团队环境。代表作品《邻家之钥》。是极鱼社战略合作伙伴。', url: 'https://tianentropy.cn/', color: '#f59e0b', logo: 'fa-solid fa-chess-rook', image: 'images/tpy.webp' },
-        { name: '宙鱼文化工作室', en: 'Zhouyu Culture Studio', type: '合作组织', desc: '宙鱼网络工作室，成立于2020年6月，至今旗下三名直属开发者，两名合作开发者，总发表组件450+，专业与广告设计、新媒体运营、文创宣发等 咨询联系:CBUAD@qq.com。', url: 'https://space.bilibili.com/486126114', color: '#0ea5e9', logo: 'fa-solid fa-city', image: 'images/cnzy.webp' },
+        { name: '宙鱼文化工作室', en: 'Zhouyu Culture Studio', type: '合作组织', desc: '宙鱼网络工作室，成立于2020年6月，至今旗下三名直属开发者，两名合作开发者，总发表组件450+，专业与广告设计、新媒体运营、文创宣发等 咨询联系:CBUAD@qq.com。', url: 'https://cbuad.net/', color: '#0ea5e9', logo: 'fa-solid fa-city', image: 'images/cnzy.webp' },
         { name: 'Realize a Dream Music Club', en: 'R.A.D Music Club', type: '创作联盟', desc: 'R.A.D. Music Club是一家立足于全球视野、面向未来的音乐团队，与极鱼社联手创作原创歌曲。', url: 'https://space.bilibili.com/105791477', color: '#ec4899', logo: 'fa-solid fa-palette', image: 'images/radlogo.webp' },
         { name: '云筑设计团队', en: 'Cloud Pavilion Work', type: '建筑团队', desc: '云筑设计团队由HOYSH创立，成立于2026年3月12日，主营现代式建筑，代表作：《天宗市》《希伦市》《像素大同系列》《像素深圳》', url: 'https://v.douyin.com/8_n7XMWClPc/', color: '#8b5cf6', logo: 'fa-solid fa-microchip', image: 'images/yzlogo.webp' },
         { name: '鸽予文化', en: 'Ge Yu Culture', type: '合作组织', desc: '上海鸽予文化有限公司，成立于2024年12月，主业为新媒体宣发及文化设计，与多名创作者展开合作，旗下鸽予工作室主营游戏《我的世界》相关物料制作。', url: '#', color: '#10b981', logo: 'fa-solid fa-cubes', image: 'images/gy.webp' },
         { name: '宇创领航工作室', en: 'YuChuang Studio', type: '合作组织', desc: '宇创领航是《我的世界》中国版综合开发工作室，深耕网易版生态，主营模组、光影、城市还原地图创作。擅长轨道交通、都市建造模组，代表作有像素邯郸、轨道交通模组、校园组件，还自研多种应用和游戏，兼顾创作与新人培育，全网传播热度较高。', url: 'https://vhwork.cn/', color: '#94a3b8', logo: 'fa-solid fa-handshake', image: 'images/yclh.webp' },
-        { name: 'MewBaka笨猫工作室', en: 'MewBaka Studio', type: '合作组织', desc: 'MewBaka笨猫工作室，成立于2024年7月。主要开发视觉小说游戏及开发产品。现正制作一款为视觉小说创作打造的现代游戏引擎——NarraLeaf Project。', url: 'https://www.mewbaka.cn/', color: '#f97316', logo: 'fa-solid fa-cat', image: 'images/mewbaka.webp' }
+        { name: 'MewBaka笨猫工作室', en: 'MewBaka Studio', type: '合作组织', desc: 'MewBaka笨猫工作室，成立于2024年7月。主要开发视觉小说游戏及开发产品。现正制作一款为视觉小说创作打造的现代游戏引擎——NarraLeaf Project。', url: 'https://www.mewbaka.cn/', color: '#f97316', logo: 'fa-solid fa-cat', image: 'images/mewbaka.webp' },
+        { name: '雨夜街水泥钟表', en: 'Rain Water', type: '合作组织', desc: '雨夜街水泥钟表（雨夜街）成立于2025年6月8日，以文字设计为核心业务，理念是“梦想优先，创作自由”。目前雨夜街的主要方向是ACG文字冒险类游戏。', url: '#', color: '#5b9bd5', logo: 'fa-solid fa-clock', image: 'images/yyj.webp' }
     ];
 
     var FRIEND_LINKS = [
         { name: '上海熵联天创', url: 'https://tianentropy.cn/', desc: '独立游戏开发团队', icon: 'fa-solid fa-gamepad', color: '#f59e0b' },
-        { name: '宙鱼文化工作室', url: 'https://space.bilibili.com/486126114', desc: '新媒体运营与文创宣发', icon: 'fa-solid fa-city', color: '#0ea5e9' },
+        { name: '宙鱼文化工作室', url: 'https://cbuad.net/', desc: '新媒体运营与文创宣发', icon: 'fa-solid fa-city', color: '#0ea5e9' },
         { name: 'R.A.D Music Club', url: 'https://space.bilibili.com/105791477', desc: '全球视野音乐团队', icon: 'fa-solid fa-music', color: '#ec4899' },
         { name: '云筑设计团队', url: 'https://v.douyin.com/8_n7XMWClPc/', desc: '现代式建筑团队', icon: 'fa-solid fa-building', color: '#8b5cf6' },
         { name: '鸽予文化', url: '#', desc: '新媒体宣发及文化设计', icon: 'fa-solid fa-feather', color: '#10b981' },
         { name: '宇创领航工作室', url: 'https://vhwork.cn/', desc: 'MC中国版综合开发工作室', icon: 'fa-solid fa-rocket', color: '#94a3b8' },
         { name: 'MewBaka笨猫工作室', url: 'https://www.mewbaka.cn/', desc: '视觉小说游戏引擎开发', icon: 'fa-solid fa-cat', color: '#f97316' },
-        { name: '预留链接', url: '#', desc: '', icon: 'fa-solid fa-link', color: '#94a3b8' },
-        { name: '预留链接', url: '#', desc: '', icon: 'fa-solid fa-link', color: '#94a3b8' }
+        { name: '雨夜街水泥钟表', url: '#', desc: '文字设计与文字冒险游戏', icon: 'fa-solid fa-clock', color: '#5b9bd5' }
     ];
 
-    // ===== 导航栏 HTML =====
     function getNavbar(activePage) {
         var isSubPage = activePage === 'partners';
         var links = [
             { href: isSubPage ? 'index.html#hero'     : '#hero',     label: '主页',     key: 'hero' },
-            { href: isSubPage ? 'index.html#about'    : '#about',    label: '简介',     key: 'about' },
             { href: isSubPage ? 'index.html#works'    : '#works',    label: '代表作品', key: 'works' },
             { href: isSubPage ? 'index.html#services' : '#services', label: '业务服务', key: 'services' },
             { href: isSubPage ? 'index.html#shop'     : '#shop',     label: '在售资源', key: 'shop' },
             { href: isSubPage ? 'index.html#members'  : '#members',  label: '成员列表', key: 'members' },
-            { href: isSubPage ? 'index.html#feedback' : '#feedback', label: '反馈入口', key: 'feedback' },
             { href: isSubPage ? 'index.html#join'     : '#join',     label: '加入我们', key: 'join' },
-            { href: 'partners.html', label: '合作伙伴', key: 'partners' }
+            { href: 'partners.html', label: '合作伙伴', key: 'partners' },
+            { href: 'https://data.swiftfishlab.cn', label: '上架数据', key: 'data', external: true }
         ];
         var navItems = links.map(function (l) {
-            return '<li><a href="' + l.href + '" class="nav-link ' + (l.key === activePage ? 'active' : '') + '" data-nav="' + l.key + '">' + l.label + '</a></li>';
+            return '<li><a href="' + l.href + '" class="nav-link ' + (l.key === activePage ? 'active' : '') + '"' +
+                (l.external ? ' target="_blank" rel="noopener"' : '') +
+                ' data-nav="' + l.key + '">' + l.label + '</a></li>';
         }).join('');
 
         var logoHref = isSubPage ? 'index.html#hero' : '#hero';
@@ -169,7 +165,6 @@
             '</nav>';
     }
 
-    // ===== 页脚 HTML =====
     function getFooter() {
         var platformLinks = PLATFORMS.map(function (p) {
             return '<a href="' + p.url + '" class="social-link" style="border-color:' + p.color + '40;color:' + p.color + '" title="' + p.name + '" target="_blank" rel="noopener"><i class="' + p.icon + '"></i></a>';
@@ -207,6 +202,7 @@
             '<li><a href="#feedback">反馈入口</a></li>' +
             '<li><a href="#join">加入我们</a></li>' +
             '<li><a href="partners.html">合作伙伴</a></li>' +
+            '<li><a href="https://data.swiftfishlab.cn" target="_blank" rel="noopener">上架数据</a></li>' +
             '</ul></div>' +
             '      <div class="footer-services"><h4>业务范围</h4><ul>' + serviceLinks + '</ul></div>' +
             '      <div class="footer-contact"><h4>联系方式</h4>' +
@@ -216,23 +212,19 @@
             '      </div>' +
             '      <div class="footer-friendlinks"><h4>友情链接</h4><div class="friend-links">' + friendLinksHtml + '</div></div>' +
             '    </div>' +
-            '    <div class="footer-bottom"><p>© 2021-2026 ' + SITE.name + ' ' + SITE.en + '. All Rights Reserved.</p><p>本网站与 Mojang AB 及网易公司无关 · ' + SITE.desc + '</p></div>' +
+            '    <div class="footer-bottom"><p>© 2021-2026 ' + SITE.name + ' ' + SITE.en + '. All Rights Reserved.</p><p>本网站与 Mojang AB 及网易公司无关 · ' + SITE.desc + '</p><p><a href="https://icp.gov.moe/?keyword=20262708" target="_blank" rel="noopener">萌ICP备20262708号</a></p></div>' +
             '  </div>' +
             '</footer>' +
             '<button class="back-to-top" id="backToTop" aria-label="返回顶部"><i class="fa-solid fa-arrow-up"></i></button>' +
             '<div class="toast" id="toast"></div>';
     }
 
-    // ===== 注入公共组件 =====
     function injectLayout(activePage) {
-        // 在 body 最前面插入导航
         document.body.insertAdjacentHTML('afterbegin', getNavbar(activePage));
 
-        // 在 body 最后面插入页脚
         document.body.insertAdjacentHTML('beforeend', getFooter());
     }
 
-    // ===== 导出 =====
     global.SITE_DATA = { SITE: SITE, SERVICES: SERVICES, WORKS: WORKS, PLATFORMS: PLATFORMS, MEMBERS: MEMBERS, SHOP_ITEMS: SHOP_ITEMS, PARTNERS: PARTNERS, FRIEND_LINKS: FRIEND_LINKS };
     global.injectLayout = injectLayout;
 })(window);

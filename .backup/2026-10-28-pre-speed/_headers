@@ -1,0 +1,19 @@
+# 静态资源缓存策略（Cloudflare Workers Static Assets 的 _headers 文件）
+# 注意：仅对不经 Worker 的静态资源生效；HTML（run_worker_first）由 Worker 处理，保持默认协商缓存。
+# 图片/字体内容极少变化：图片与 CSS/JS 允许浏览器缓存 7 天，字体 1 年（字体文件名即版本，
+# 变更时换文件名即可）。HTML 引用均带 ?v= 查询参数，版本号变更即可绕过旧缓存。
+
+/images/*
+  Cache-Control: public, max-age=604800
+
+/webfonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/css/*
+  Cache-Control: public, max-age=604800
+
+/style.min.css
+  Cache-Control: public, max-age=604800
+
+/*.min.js
+  Cache-Control: public, max-age=604800

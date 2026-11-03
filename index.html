@@ -2,7 +2,6 @@
 <html lang="zh-CN">
 <head>
     <script>
-        // 强制 HTTPS 跳转 —— 兜底微信/QQ/抖音等不识别 HSTS 的内置浏览器
         if (location.protocol === 'http:' && location.hostname !== 'localhost') {
             location.replace('https://' + location.host + location.pathname + location.search + location.hash);
         }
@@ -19,49 +18,48 @@
     <meta name="author" content="极鱼社 SwiftFishLab">
     <meta name="robots" content="index, follow">
     <link rel="icon" href="images/sfllogo.webp">
-    <link rel="canonical" href="https://swiftfishlab.cn/">
-    <!-- 搜索引擎验证 -->
+    <link rel="canonical" href="https://www.swiftfishlab.cn/">
     <meta name="baidu-site-verification" content="codeva-UTzmSOtPoe" />
     <meta name="google-site-verification" content="" />
     <meta name="msvalidate.01" content="" />
     <meta name="360-site-verification" content="" />
     <meta name="sogou_site_verification" content="XYBvEzMnI7" />
-    <!-- Open Graph / 社交分享 -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="极鱼社 SwiftFishLab - Minecraft综合型开发团队">
     <meta property="og:description" content="始创于2021年，专注MC皮肤、建筑、Addon、Vocaloid音乐企划，MC中国版累计下载量超2000万。">
-    <meta property="og:url" content="https://swiftfishlab.cn/">
-    <meta property="og:image" content="https://swiftfishlab.cn/images/sfllogo.webp">
+    <meta property="og:url" content="https://www.swiftfishlab.cn/">
+    <meta property="og:image" content="https://www.swiftfishlab.cn/og-logo.png">
     <meta property="og:site_name" content="极鱼社 SwiftFishLab">
     <meta property="og:locale" content="zh_CN">
-    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="极鱼社 SwiftFishLab - Minecraft综合型开发团队">
     <meta name="twitter:description" content="MC皮肤|建筑|Addon|拼豆|存档转换|Vocaloid，累计下载量超2000万。">
-    <meta name="twitter:image" content="https://swiftfishlab.cn/images/sfllogo.webp">
-    <!-- 结构化数据 -->
+    <meta name="twitter:image" content="https://www.swiftfishlab.cn/og-logo.png">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "极鱼社 SwiftFishLab",
       "description": "Minecraft综合型开发团队，始创于2021年，专注皮肤、建筑、Addon、拼豆像素画、存档转换。",
-      "url": "https://swiftfishlab.cn",
-      "logo": "https://swiftfishlab.cn/images/sfllogo.webp",
+      "url": "https://www.swiftfishlab.cn",
+      "logo": "https://www.swiftfishlab.cn/og-logo.png",
       "foundingDate": "2021",
       "address": { "@type": "PostalAddress", "addressCountry": "CN" }
     }
     </script>
-    <link rel="preload" as="image" href="images/hero-bg.webp" fetchpriority="high">
+    <link rel="preload" as="image" href="images/hero-bg-1440.webp" media="(max-width: 1440px)" fetchpriority="high">
+    <link rel="preload" as="image" href="images/hero-bg.webp" media="(min-width: 1441px)" fetchpriority="high">
     <link rel="preload" as="image" href="images/sfllogo.webp">
-    <link rel="preload" as="style" href="style.min.css?v=93600b8">
-    <link rel="stylesheet" href="css/font-awesome.min.css?v=93600b8" media="print" onload="this.media='all';this.onload=null">
-    <link rel="stylesheet" href="style.min.css?v=93600b8">
+    <link rel="preload" as="style" href="style.min.css?v=20261028">
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="webfonts/chakra-petch-latin-400-normal.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="webfonts/chakra-petch-latin-500-normal.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="webfonts/chakra-petch-latin-700-normal.woff2">
+    <link rel="stylesheet" href="css/font-awesome.min.css?v=20261022i" media="print" onload="this.media='all';this.onload=null">
+    <link rel="stylesheet" href="style.min.css?v=20261028">
     <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 </head>
 <body class="page-home">
     <main>
-        <!-- 1. Hero 主页首屏 -->
         <section class="hero" id="hero">
             <div class="hero-bg"></div>
             <div class="hero-frosted"></div>
@@ -76,7 +74,6 @@
             </div>
         </section>
 
-        <!-- 2. 统计数据 -->
         <section class="stats" id="stats">
             <div class="container">
                 <div class="stats-row">
@@ -104,7 +101,6 @@
             </div>
         </section>
 
-        <!-- 3. 简介 About -->
         <section class="section about-section" id="about">
             <div class="container">
                 <div class="section-head reveal">
@@ -148,7 +144,6 @@
             </div>
         </section>
 
-        <!-- 4. 代表作品 Works -->
         <section class="section works-section" id="works">
             <div class="container">
                 <div class="section-head reveal">
@@ -158,7 +153,6 @@
                     <p class="section-subtitle">精心打造的每一个作品，都是热爱与匠心的结晶</p>
                 </div>
 
-                <!-- 建筑作品 - 左右错落 -->
                 <div class="works-category reveal">
                     <div class="category-label">
                         <span class="cat-icon"><i class="fa-solid fa-landmark"></i></span>
@@ -168,7 +162,6 @@
                     <div class="buildings-list" id="buildingsList"></div>
                 </div>
 
-                <!-- Addon作品 - 网格展示 -->
                 <div class="works-category reveal" style="--delay: 0.1s">
                     <div class="category-label">
                         <span class="cat-icon" style="background:rgba(139, 92, 246, 0.12);color:#8b5cf6"><i class="fa-solid fa-puzzle-piece"></i></span>
@@ -178,7 +171,6 @@
                     <div class="addons-grid" id="addonsGrid"></div>
                 </div>
 
-                <!-- 玩法地图 - 左右错落（复用建筑排版） -->
                 <div class="works-category reveal" style="--delay: 0.15s">
                     <div class="category-label">
                         <span class="cat-icon" style="background:rgba(16, 185, 129, 0.12);color:#10b981"><i class="fa-solid fa-map-location-dot"></i></span>
@@ -188,7 +180,6 @@
                     <div class="buildings-list" id="mapsList"></div>
                 </div>
 
-                <!-- 皮肤作品 - 流动展示 -->
                 <div class="works-category reveal" style="--delay: 0.2s">
                     <div class="category-label">
                         <span class="cat-icon" style="background:rgba(236, 72, 153, 0.12);color:#ec4899"><i class="fa-solid fa-user-group"></i></span>
@@ -203,7 +194,29 @@
             </div>
         </section>
 
-        <!-- 5. 业务服务 Services -->
+        <section class="section data-section" id="data-platform">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="section-tag">SFL DATA</span>
+                    <h2 class="section-title">SFL 智慧数据统计系统</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-subtitle">旨在为社员提供更便捷、公开透明的作品数据查询方法。</p>
+                </div>
+                <a class="data-card reveal" href="https://data.swiftfishlab.cn" target="_blank" rel="noopener">
+                    <div class="data-info">
+                        <div class="data-badges">
+                            <span class="data-badge"><i class="fa-solid fa-chart-simple"></i>上架数据总览</span>
+                            <span class="data-badge"><i class="fa-solid fa-calendar-days"></i>排期日历</span>
+                            <span class="data-badge"><i class="fa-solid fa-users"></i>账号矩阵</span>
+                        </div>
+                        <h3>上架数据看板</h3>
+                        <p>把 MC 资源大厅与自媒体平台的累计上架、下载量、粉丝数汇总到一屏，支持按日期、类别、发布账号筛选——谁在什么时候上了什么，公开可查。</p>
+                        <span class="data-cta">打开数据看板 <i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
         <section class="section services-section" id="services">
             <div class="container">
                 <div class="section-head reveal">
@@ -216,7 +229,6 @@
             </div>
         </section>
 
-        <!-- 6. 在售资源 Shop -->
         <section class="section shop-section" id="shop">
             <div class="container">
                 <div class="section-head reveal">
@@ -247,7 +259,6 @@
             </div>
         </section>
 
-        <!-- 7. 成员列表 Members -->
         <section class="section members-section" id="members">
             <div class="container">
                 <div class="section-head reveal">
@@ -260,7 +271,6 @@
             </div>
         </section>
 
-        <!-- 8. 反馈入口 Feedback -->
         <section class="section feedback-section" id="feedback">
             <div class="container">
                 <div class="section-head reveal">
@@ -320,7 +330,6 @@
             </div>
         </section>
 
-        <!-- 9. 加入我们 Join -->
         <section class="section join-section" id="join">
             <div class="container">
                 <div class="section-head reveal">
@@ -346,7 +355,7 @@
                                 <span class="join-icon"><i class="fa-solid fa-handshake"></i></span>
                                 <div class="join-group-info">
                                     <strong>负责人QQ 2</strong>
-                                    <div class="join-group-num" onclick="copyText('83345672')">83345672 <i class="fa-regular fa-copy"></i></div>
+                                    <div class="join-group-num" onclick="copyText('83345672')">83345672 <i class="fa-solid fa-copy"></i></div>
                                 </div>
                             </div>
                         </div>
@@ -361,7 +370,6 @@
             </div>
         </section>
 
-        <!-- 关注我们 Platforms -->
         <section class="section platforms-section">
             <div class="container">
                 <div class="section-head reveal">
@@ -375,17 +383,15 @@
         </section>
     </main>
 
-    <script src="common.min.js?v=93600b8"></script>
+    <script src="images/responsive.js?v=20261029a"></script>
+    <script src="common.min.js?v=20261028"></script>
     <script>
-        // 注入导航和页脚（安全调用）
         try { if (typeof injectLayout === 'function') injectLayout('hero'); } catch(e) { console.warn('布局注入失败:', e); }
 
-        // 如果 SITE_DATA 未加载（common.js 失败），提前退出渲染
         if (typeof SITE_DATA === 'undefined') {
             console.warn('common.js 未加载，跳过动态渲染。请检查网络连接。');
         } else {(function(){
 
-        // 渲染服务卡片
         (function() {
             var grid = document.getElementById('servicesGrid');
             if (!grid) return;
@@ -407,7 +413,6 @@
             });
         })();
 
-        // 渲染建筑作品 - 左右错落
         (function() {
             var list = document.getElementById('buildingsList');
             if (!list) return;
@@ -418,7 +423,7 @@
                 item.className = 'building-item reveal ' + (isLeft ? 'left' : 'right') + reservedClass;
                 item.style.setProperty('--delay', (idx * 0.08) + 's');
                 var visualHtml = b.image && !b.isReserved
-                    ? '<img src="' + b.image + '" alt="' + b.title + '" class="building-img" loading="lazy" decoding="async" onerror="this.outerHTML=\'<div class=\\\'building-placeholder\\\'><i class=\\\'fa-solid ' + b.icon + '\\\'></i></div>\'">'
+                    ? '<img src="' + b.image + '"' + imgAttrs(b.image, '(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px') + ' alt="' + b.title + '" class="building-img" loading="lazy" decoding="async" onerror="this.outerHTML=\'<div class=\\\'building-placeholder\\\'><i class=\\\'fa-solid ' + b.icon + '\\\'></i></div>\'">'
                     : '<div class="building-placeholder' + (b.isReserved ? ' empty' : '') + '"><i class="fa-solid ' + b.icon + '"></i>' + (b.isReserved ? '<span class=\\\'empty-label\\\'>图片预留位</span>' : '') + '</div>';
                 item.innerHTML =
                     '<div class="building-visual">' +
@@ -437,7 +442,6 @@
             });
         })();
 
-        // 渲染Addon作品 - 宽图+方图
         (function() {
             var grid = document.getElementById('addonsGrid');
             if (!grid) return;
@@ -448,7 +452,7 @@
                 item.className = 'addon-item reveal ' + layoutClass + reservedClass;
                 item.style.setProperty('--delay', (idx * 0.06) + 's');
                 var visualHtml = a.image && !a.isReserved
-                    ? '<img src="' + a.image + '" alt="' + a.title + '" class="addon-img" loading="lazy" decoding="async" onerror="this.outerHTML=\'<div class=\\\'addon-placeholder\\\'><i class=\\\'fa-solid ' + a.icon + '\\\'></i></div>\'">'
+                    ? '<img src="' + a.image + '"' + imgAttrs(a.image, '(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px') + ' alt="' + a.title + '" class="addon-img" loading="lazy" decoding="async" onerror="this.outerHTML=\'<div class=\\\'addon-placeholder\\\'><i class=\\\'fa-solid ' + a.icon + '\\\'></i></div>\'">'
                     : '<div class="addon-placeholder' + (a.isReserved ? ' empty' : '') + '"><i class="fa-solid ' + a.icon + '"></i>' + (a.isReserved ? '<span class=\\\'empty-label\\\'>图片预留位</span>' : '') + '</div>';
                 item.innerHTML =
                     '<div class="addon-visual">' +
@@ -467,7 +471,6 @@
             });
         })();
 
-        // 渲染玩法地图 - 复用建筑左右错落排版
         (function() {
             var list = document.getElementById('mapsList');
             if (!list) return;
@@ -478,7 +481,7 @@
                 item.className = 'building-item reveal ' + (isLeft ? 'left' : 'right') + reservedClass;
                 item.style.setProperty('--delay', (idx * 0.08) + 's');
                 var visualHtml = m.image && !m.isReserved
-                    ? '<img src="' + m.image + '" alt="' + m.title + '" class="building-img" loading="lazy" decoding="async" onerror="this.outerHTML=\'<div class=\\\'building-placeholder\\\'><i class=\\\'fa-solid ' + m.icon + '\\\'></i></div>\'">'
+                    ? '<img src="' + m.image + '"' + imgAttrs(m.image, '(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px') + ' alt="' + m.title + '" class="building-img" loading="lazy" decoding="async" onerror="this.outerHTML=\'<div class=\\\'building-placeholder\\\'><i class=\\\'fa-solid ' + m.icon + '\\\'></i></div>\'">'
                     : '<div class="building-placeholder' + (m.isReserved ? ' empty' : '') + '"><i class="fa-solid ' + m.icon + '"></i>' + (m.isReserved ? '<span class=\\\'empty-label\\\'>图片预留位</span>' : '') + '</div>';
                 item.innerHTML =
                     '<div class="building-visual">' +
@@ -497,7 +500,6 @@
             });
         })();
 
-        // 渲染皮肤作品 - 流动轮播（自动滚动 + 手动索引）
         (function() {
             var track = document.getElementById('skinsTrack');
             var dotsContainer = document.getElementById('skinsDots');
@@ -505,13 +507,12 @@
             var skins = SITE_DATA.WORKS.skins;
             var totalSkins = skins.length;
 
-            // 三份复制实现无缝双向滚动
             var allSkins = skins.concat(skins).concat(skins);
             allSkins.forEach(function(s, idx) {
                 var card = document.createElement('div');
                 card.className = 'skin-card';
                 var imgHtml = s.image
-                    ? '<img src="' + s.image + '" alt="' + s.title + '" class="skin-img" loading="lazy" decoding="async" onerror="this.outerHTML=\'<div class=\\\'skin-img-placeholder\\\'><i class=\\\'fa-solid fa-user\\\'></i><span class=\\\'ph-label\\\'>图片预留位</span></div>\'">'
+                    ? '<img src="' + s.image + '"' + imgAttrs(s.image, '(max-width: 640px) 240px, 280px') + ' alt="' + s.title + '" class="skin-img" loading="lazy" decoding="async" onerror="this.outerHTML=\'<div class=\\\'skin-img-placeholder\\\'><i class=\\\'fa-solid fa-user\\\'></i><span class=\\\'ph-label\\\'>图片预留位</span></div>\'">'
                     : '<div class="skin-img-placeholder"><i class="fa-solid fa-user"></i><span class="ph-label">图片预留位</span></div>';
                 card.innerHTML =
                     imgHtml +
@@ -523,14 +524,12 @@
                 track.appendChild(card);
             });
 
-            // 动态计算步长（卡片宽度 + 间距），响应式自适应
             function getStep() {
                 var cards = track.querySelectorAll('.skin-card');
                 if (cards.length < 2) return 328;
                 return cards[1].getBoundingClientRect().left - cards[0].getBoundingClientRect().left;
             }
 
-            // 渲染可点击指示点
             var allDots = [];
             var activeDotIdx = 0;
             if (dotsContainer) {
@@ -554,15 +553,14 @@
                 }
             }
 
-            // 状态
-            var virtualIndex = totalSkins;   // 从中间拷贝开始（索引 N ~ 2N-1）
-            var speed = 1.6;                  // px/frame ≈ 96px/s，与原来50s动画接近
+            var virtualIndex = totalSkins;
+            var speed = 1.6;
             var paused = false;
-            var manualTarget = null;          // 手动目标（虚拟索引）
+            var manualTarget = null;
             var resumeTimer = null;
 
             function goToSkin(idx) {
-                manualTarget = totalSkins + idx; // 中间拷贝的第 idx 个
+                manualTarget = totalSkins + idx;
                 clearTimeout(resumeTimer);
                 resumeTimer = setTimeout(function() { manualTarget = null; }, 5000);
             }
@@ -577,13 +575,12 @@
                             virtualIndex = manualTarget;
                             manualTarget = null;
                         } else {
-                            virtualIndex += diff * 0.1; // 缓动
+                            virtualIndex += diff * 0.1;
                         }
                     } else {
                         virtualIndex += speed / step;
                     }
 
-                    // 回绕：保持在中间拷贝范围内
                     while (virtualIndex >= totalSkins * 2) virtualIndex -= totalSkins;
                     while (virtualIndex < totalSkins)     virtualIndex += totalSkins;
 
@@ -593,7 +590,6 @@
                 requestAnimationFrame(animate);
             }
 
-            // 悬停暂停
             track.addEventListener('mouseenter', function() { paused = true; });
             track.addEventListener('mouseleave', function() { paused = false; });
             if (dotsContainer) {
@@ -604,7 +600,6 @@
             requestAnimationFrame(animate);
         })();
 
-        // 渲染在售资源
         (function() {
             var grid = document.getElementById('shopGrid');
             if (!grid) return;
@@ -614,7 +609,7 @@
                 item.style.setProperty('--delay', (idx * 0.08) + 's');
                 var tagHtml = p.tag ? '<span class="shop-tag" style="background:' + p.tagColor + '">' + p.tag + '</span>' : '';
                 var visualHtml = p.image
-                    ? '<img src="' + p.image + '" alt="' + p.title + '" class="shop-img" loading="lazy" decoding="async" onerror="this.outerHTML=\'<div class=\\\'shop-img-ph\\\'><i class=\\\'fa-solid ' + p.icon + '\\\'></i></div>\'">'
+                    ? '<img src="' + p.image + '"' + imgAttrs(p.image, '(max-width: 640px) 100vw, 320px') + ' alt="' + p.title + '" class="shop-img" loading="lazy" decoding="async" onerror="this.outerHTML=\'<div class=\\\'shop-img-ph\\\'><i class=\\\'fa-solid ' + p.icon + '\\\'></i></div>\'">'
                     : '<div class="shop-img-ph"><i class="fa-solid ' + p.icon + '"></i></div>';
                 item.innerHTML =
                     '<div class="shop-visual">' +
@@ -634,7 +629,6 @@
             });
         })();
 
-        // 渲染成员列表
         (function() {
             var grid = document.getElementById('membersGrid');
             if (!grid) return;
@@ -645,7 +639,7 @@
                 card.style.setProperty('--m-color', m.color);
                 var visualHtml = m.image
                     ? '<div class="member-visual">' +
-                      '  <img src="' + m.image + '" alt="' + m.name + '" loading="lazy" decoding="async" onerror="this.outerHTML=\'<div class=\\\'member-ph-avatar\\\'><i class=\\\'' + m.avatar + '\\\'></i></div>\'">' +
+                      '  <img src="' + m.image + '"' + imgAttrs(m.image, '(max-width: 640px) 80px, 100px') + ' alt="' + m.name + '" loading="lazy" decoding="async" onerror="this.outerHTML=\'<div class=\\\'member-ph-avatar\\\'><i class=\\\'' + m.avatar + '\\\'></i></div>\'">' +
                       '</div>'
                     : '<div class="member-visual"><div class="member-ph-avatar"><i class="' + m.avatar + '"></i></div></div>';
                 card.innerHTML =
@@ -660,7 +654,6 @@
             });
         })();
 
-        // 渲染平台
         (function() {
             var grid = document.getElementById('platformsGrid');
             if (!grid) return;
@@ -681,8 +674,189 @@
         })();
 
     })();
-    } // 结束 SITE_DATA 守卫包装
+    }
     </script>
-    <script src="script.min.js?v=93600b8"></script>
+    <script>
+    /* 作品 / 成员列表：第三行渐隐过渡 + 展开/收起动画 */
+    (function () {
+        var PEEK = 0.62;          /* 第三行露出到 62% 高度，其余交给渐隐 */
+        var DURATION = 900;       /* 与 CSS 过渡时长一致 */
+        var MASK = 'linear-gradient(to bottom, #000 0%, #000 var(--peek-fade, 100%), rgba(0,0,0,0.55) calc(var(--peek-fade, 100%) + 9%), rgba(0,0,0,0) 100%)';
+        var reduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+        function initCollapse(listId, moreLabel) {
+            var list = document.getElementById(listId);
+            if (!list) return;
+
+            var items = [].slice.call(list.children).filter(function (el) { return el.nodeType === 1; });
+            if (items.length < 3) return;
+
+            var collapsed = true;
+            var timer = null;
+
+            var wrap = document.createElement("div");
+            wrap.className = "works-more-wrap";
+            var btn = document.createElement("button");
+            btn.type = "button";
+            btn.className = "btn btn-ghost works-more";
+            btn.setAttribute("aria-expanded", "false");
+            wrap.appendChild(btn);
+            list.parentNode.insertBefore(wrap, list.nextSibling);
+            list.classList.add("peek-list");
+
+            /* 按条目顶部坐标归行：自动兼容单列列表、多列网格与跨列卡片 */
+            function measureRows() {
+                var listTop = list.getBoundingClientRect().top;
+                var rows = [];
+                items.forEach(function (el) {
+                    var r = el.getBoundingClientRect();
+                    var top = Math.round(r.top - listTop);
+                    var row = null;
+                    for (var i = 0; i < rows.length; i++) {
+                        if (Math.abs(rows[i].top - top) <= 2) { row = rows[i]; break; }
+                    }
+                    if (!row) {
+                        rows.push({ top: top, height: r.height });
+                    } else if (r.height > row.height) {
+                        row.height = r.height;
+                    }
+                });
+                rows.sort(function (a, b) { return a.top - b.top; });
+                return rows;
+            }
+
+            function clipInfo() {
+                var rows = measureRows();
+                if (rows.length <= 2) return null;
+                var third = rows[2];
+                var clip = Math.ceil(third.top + third.height * PEEK);
+                var fadePct = Math.max(10, Math.min(96, Math.round((third.top / clip) * 100)));
+                return { clip: clip, fade: fadePct + "%" };
+            }
+
+            function countShown(clip) {
+                var listTop = list.getBoundingClientRect().top;
+                var shown = 0;
+                items.forEach(function (el) {
+                    if (el.getBoundingClientRect().top - listTop < clip - 1) shown++;
+                });
+                return shown;
+            }
+
+            function updateLabel(shown) {
+                if (collapsed) {
+                    btn.innerHTML = moreLabel + ' <span class="works-more-count">还有 ' + Math.max(items.length - shown, 1) + ' 个</span><i class="fa-solid fa-chevron-down"></i>';
+                    btn.setAttribute("aria-expanded", "false");
+                } else {
+                    btn.innerHTML = '收起<i class="fa-solid fa-chevron-up"></i>';
+                    btn.setAttribute("aria-expanded", "true");
+                }
+            }
+
+            /* 初次渲染：直接应用折叠态，不做动画 */
+            function initLayout() {
+                var info = clipInfo();
+                if (!info) { wrap.style.display = "none"; return; }
+                list.style.transition = "none";
+                list.style.overflow = "hidden";
+                list.style.maskImage = MASK;
+                list.style.webkitMaskImage = MASK;
+                list.style.setProperty("--peek-fade", info.fade);
+                list.style.maxHeight = info.clip + "px";
+                void list.offsetHeight;
+                list.style.transition = "";
+                updateLabel(countShown(info.clip));
+            }
+
+            /* 展开 / 收起：max-height 与遮罩渐隐同步过渡 */
+            function animateTo(expand) {
+                var info = clipInfo();
+                if (!info) return;
+
+                var startH = list.getBoundingClientRect().height;
+                var endH = expand ? Math.max(list.scrollHeight, startH) : info.clip;
+
+                list.style.transition = "none";
+                list.style.overflow = "hidden";
+                list.style.maxHeight = startH + "px";
+                /* 展开与收起都先恢复遮罩（完全实心），再过渡，避免收起时丢失渐隐 */
+                list.style.maskImage = MASK;
+                list.style.webkitMaskImage = MASK;
+                list.style.setProperty("--peek-fade", "100%");
+                void list.offsetHeight;
+                list.style.transition = "";
+                list.style.maxHeight = endH + "px";
+                if (!expand) {
+                    list.style.setProperty("--peek-fade", info.fade);
+                }
+
+                clearTimeout(timer);
+                timer = setTimeout(function () {
+                    if (expand) {
+                        /* 展开完成：解除裁切，恢复自适应高度 */
+                        list.style.maxHeight = "";
+                        list.style.overflow = "";
+                        list.style.maskImage = "";
+                        list.style.webkitMaskImage = "";
+                    }
+                }, reduced ? 30 : DURATION);
+            }
+
+            btn.addEventListener("click", function () {
+                var wasCollapsed = collapsed;
+                collapsed = !collapsed;
+                animateTo(!collapsed);
+                if (collapsed) {
+                    var info = clipInfo();
+                    updateLabel(info ? countShown(info.clip) : items.length);
+                } else {
+                    updateLabel(items.length);
+                }
+                if (collapsed && wasCollapsed === false) {
+                    var top = list.getBoundingClientRect().top;
+                    if (top < 0) window.scrollTo({ top: window.scrollY + top - 90, behavior: "smooth" });
+                }
+            });
+
+            var resizeTimer;
+            var lastWidth = window.innerWidth;
+            window.addEventListener("resize", function () {
+                if (Math.abs(window.innerWidth - lastWidth) < 2) return;
+                lastWidth = window.innerWidth;
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(function () {
+                    if (!collapsed) return;
+                    /* 折叠态下重算裁切位置 */
+                    var info = clipInfo();
+                    if (!info) return;
+                    list.style.transition = "none";
+                    list.style.maxHeight = info.clip + "px";
+                    list.style.setProperty("--peek-fade", info.fade);
+                    void list.offsetHeight;
+                    list.style.transition = "";
+                    updateLabel(countShown(info.clip));
+                }, 200);
+            });
+
+            initLayout();
+            window.addEventListener('load', function () { if (collapsed) initLayout(); });
+        }
+
+        function initAll() {
+            initCollapse("buildingsList", "展开全部代表作品");
+            initCollapse("addonsGrid", "展开全部代表作品");
+            initCollapse("mapsList", "展开全部代表作品");
+            initCollapse("membersGrid", "展开全部代表成员");
+        }
+
+        if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", function () { requestAnimationFrame(initAll); });
+        } else {
+            requestAnimationFrame(initAll);
+        }
+    })();
+    </script>
+    <script src="script.min.js?v=5281cce"></script>
 </body>
 </html>
+

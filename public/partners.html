@@ -1,8 +1,7 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <script>
-        // 强制 HTTPS 跳转 —— 兜底微信/QQ/抖音等不识别 HSTS 的内置浏览器
         if (location.protocol === 'http:' && location.hostname !== 'localhost') {
             location.replace('https://' + location.host + location.pathname + location.search + location.hash);
         }
@@ -15,16 +14,18 @@
     <meta name="theme-color" content="#0f172a">
     <title>合作伙伴 - 极鱼社 Swift Fish Lab</title>
     <meta name="description" content="极鱼社&合作伙伴 - 与众多优秀团队与社区携手共进，共同打造更优质的Minecraft体验">
-    <link rel="preload" as="style" href="style.min.css?v=93600b8">
+    <link rel="preload" as="style" href="style.min.css?v=20261028">
     <link rel="preload" as="image" href="images/sfllogo.webp">
     <link rel="icon" href="images/sfllogo.webp">
-    <link rel="stylesheet" href="css/font-awesome.min.css?v=93600b8" media="print" onload="this.media='all';this.onload=null">
-    <link rel="stylesheet" href="style.min.css?v=93600b8">
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="webfonts/chakra-petch-latin-400-normal.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="webfonts/chakra-petch-latin-500-normal.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin href="webfonts/chakra-petch-latin-700-normal.woff2">
+    <link rel="stylesheet" href="css/font-awesome.min.css?v=20261022i" media="print" onload="this.media='all';this.onload=null">
+    <link rel="stylesheet" href="style.min.css?v=20261028">
     <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 </head>
 <body>
     <main>
-        <!-- 合作伙伴 Hero -->
         <section class="partners-hero" id="partnersHero">
             <div class="partners-hero-content">
                 <span class="eyebrow reveal">OUR PARTNERS</span>
@@ -33,7 +34,6 @@
             </div>
         </section>
 
-        <!-- 合作伙伴列表 -->
         <section class="partners-section" id="partners">
             <div class="container">
                 <div class="section-head reveal">
@@ -47,12 +47,12 @@
         </section>
     </main>
 
-    <script src="common.min.js?v=93600b8"></script>
+    <script src="images/responsive.js?v=20261029a"></script>
+    <script src="common.min.js?v=20261028"></script>
     <script>
         try { injectLayout('partners'); } catch(e) { console.warn('布局注入失败:', e); }
         if (typeof SITE_DATA === 'undefined') { console.warn('common.js 未加载'); } else {
 
-        // 渲染合作伙伴卡片
         (function() {
             var grid = document.getElementById('partnersGrid');
             if (!grid || !SITE_DATA.PARTNERS) return;
@@ -66,7 +66,7 @@
                 card.style.setProperty('--p-color', p.color || '#0ea5e9');
                 card.style.setProperty('--p-color-alpha', (p.color || '#0ea5e9') + '24');
                 var coverHtml = p.image
-                    ? '<img src="' + p.image + '" alt="' + p.name + '" loading="lazy" decoding="async" onerror="this.outerHTML=\'<div class=\\\'partner-cover-ph\\\'><i class=\\\'' + p.logo + '\\\'></i></div>\'">'
+                    ? '<img src="' + p.image + '"' + imgAttrs(p.image, '(max-width: 640px) 100vw, 400px') + ' alt="' + p.name + '" loading="lazy" decoding="async" onerror="this.outerHTML=\'<div class=\\\'partner-cover-ph\\\'><i class=\\\'' + p.logo + '\\\'></i></div>\'">'
                     : '<div class="partner-cover-ph"><i class="' + p.logo + '"></i></div>';
                 card.innerHTML =
                     '<div class="partner-cover">' +
@@ -83,8 +83,9 @@
             });
         })();
 
-    } // 结束 SITE_DATA 守卫
+    }
     </script>
-    <script src="script.min.js?v=93600b8"></script>
+    <script src="script.min.js?v=5281cce"></script>
 </body>
 </html>
+

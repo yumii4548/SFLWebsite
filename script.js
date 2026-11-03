@@ -1,7 +1,3 @@
-/**
- * 极鱼社官网 - 交互脚本
- * 纯原生JS，无任何依赖
- */
 (function () {
     'use strict';
 
@@ -18,7 +14,6 @@
         initScrollSpy();
     });
 
-    // 导航栏滚动效果
     function initNavbar() {
         var navbar = document.getElementById('navbar');
         if (!navbar) return;
@@ -28,7 +23,6 @@
         });
     }
 
-    // 汉堡菜单（右侧抽屉 + 遮罩）
     function initHamburgerMenu() {
         var toggle = document.getElementById('navToggle');
         var menu = document.getElementById('navMenu');
@@ -72,7 +66,6 @@
         });
     }
 
-    // 平滑滚动
     function initSmoothScroll() {
         var links = document.querySelectorAll('a[href^="#"]');
         links.forEach(function (a) {
@@ -89,7 +82,6 @@
         });
     }
 
-    // 滚动高亮当前章节
     function initScrollSpy() {
         var sections = document.querySelectorAll('section[id]');
         var navLinks = document.querySelectorAll('.nav-link[data-nav]');
@@ -123,7 +115,6 @@
         updateActive();
     }
 
-    // 滚动渐入动画
     function initScrollAnimations() {
         var reveals = document.querySelectorAll('.reveal');
         if (!reveals.length) return;
@@ -142,7 +133,6 @@
         reveals.forEach(function (el) { observer.observe(el); });
     }
 
-    // 数字滚动动画
     function initStatsCounter() {
         var counters = document.querySelectorAll('.stat-value');
         if (!counters.length) return;
@@ -176,7 +166,6 @@
         requestAnimationFrame(update);
     }
 
-    // 返回顶部
     function initBackToTop() {
         var btn = document.getElementById('backToTop');
         if (!btn) return;
@@ -189,7 +178,6 @@
         });
     }
 
-    // 作品筛选
     function initGalleryFilters() {
         var buttons = document.querySelectorAll('.filter-btn');
         var items = document.querySelectorAll('.gallery-item');
@@ -214,7 +202,6 @@
         });
     }
 
-    // FAQ手风琴
     function initFaqAccordion() {
         var questions = document.querySelectorAll('.faq-question');
         if (!questions.length) return;
@@ -228,7 +215,6 @@
         });
     }
 
-    // 复制文本
     function initCopyText() {
         window.copyText = function (text) {
             if (!text) return;

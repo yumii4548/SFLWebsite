@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Sitemap: https://swiftfishlab.cn/sitemap.xml
+
+# 附站 sitemap（副站部署 sitemap.xml 后可取消下一行注释）
+# Sitemap: https://data.swiftfishlab.cn/sitemap.xml
+
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 1

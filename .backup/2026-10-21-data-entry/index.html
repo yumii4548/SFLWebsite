@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <script>
+        if (location.protocol === 'http:' && location.hostname !== 'localhost') {
+            location.replace('https://' + location.host + location.pathname + location.search + location.hash);
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no, email=no, address=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="#0f172a">
+    <title>极鱼社 SwiftFishLab - Minecraft 综合开发团队</title>
+    <meta name="description" content="极鱼社（Swift Fish Lab）始创于2021年，专注Minecraft皮肤定制、建筑承包、Addon模组开发、拼豆像素画图纸、全版本存档互通、授权原创皮肤代投、Vocaloid音乐企划，累计下载量超2000万，团队订阅20w+。">
+    <meta name="keywords" content="极鱼社,SwiftFishLab,Swift Fish Lab,Minecraft,我的世界,MC皮肤定制,MC皮肤,皮肤代投,MC建筑,古建筑,现代建筑,Addon模组,Addon,拼豆像素画,拼豆图纸,存档转换,全版本存档互通,Vocaloid,音乐企划,我的世界开发团队,MC组件开发,尚国营建,HG Studio,像素画,MC中国版">
+    <meta name="author" content="极鱼社 SwiftFishLab">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" href="images/sfllogo.webp">
+    <link rel="canonical" href="https://swiftfishlab.cn/">
+    <meta name="baidu-site-verification" content="codeva-UTzmSOtPoe" />
+    <meta name="google-site-verification" content="" />
+    <meta name="msvalidate.01" content="" />
+    <meta name="360-site-verification" content="" />
+    <meta name="sogou_site_verification" content="XYBvEzMnI7" />
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="极鱼社 SwiftFishLab - Minecraft综合型开发团队">
+    <meta property="og:description" content="始创于2021年，专注MC皮肤、建筑、Addon、Vocaloid音乐企划，MC中国版累计下载量超2000万。">
+    <meta property="og:url" content="https://swiftfishlab.cn/">
+    <meta property="og:image" content="https://swiftfishlab.cn/images/sfllogo.webp">
+    <meta property="og:site_name" content="极鱼社 SwiftFishLab">
+    <meta property="og:locale" content="zh_CN">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="极鱼社 SwiftFishLab - Minecraft综合型开发团队">
+    <meta name="twitter:description" content="MC皮肤|建筑|Addon|拼豆|存档转换|Vocaloid，累计下载量超2000万。">
+    <meta name="twitter:image" content="https://swiftfishlab.cn/images/sfllogo.webp">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "极鱼社 SwiftFishLab",
+      "description": "Minecraft综合型开发团队，始创于2021年，专注皮肤、建筑、Addon、拼豆像素画、存档转换。",
+      "url": "https://swiftfishlab.cn",
+      "logo": "https://swiftfishlab.cn/images/sfllogo.webp",
+      "foundingDate": "2021",
+      "address": { "@type": "PostalAddress", "addressCountry": "CN" }
+    }
+    </script>
+    <link rel="preload" as="image" href="images/hero-bg.webp" fetchpriority="high">
+    <link rel="preload" as="image" href="images/sfllogo.webp">
+    <link rel="preload" as="style" href="style.min.css?v=5281cce">
+    <link rel="stylesheet" href="css/font-awesome.min.css?v=5281cce" media="print" onload="this.media='all';this.onload=null">
+    <link rel="stylesheet" href="style.min.css?v=5281cce">
+    <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body class="page-home">
+    <main>
+        <section class="hero" id="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-frosted"></div>
+            <div class="hero-content container">
+                <div class="hero-text reveal">
+                    <p class="hero-slogan">立足实际，志在多元。</p>
+                    <h1 class="hero-teamname">极鱼社 <span>Swift Fish Lab</span></h1>
+                </div>
+                <div class="hero-scroll" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
+                    <span></span><span></span><span></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats" id="stats">
+            <div class="container">
+                <div class="stats-row">
+                    <div class="stat-item reveal">
+                        <div class="stat-value" data-count="2000" data-suffix="万+">0</div>
+                        <div class="stat-label">累计下载量</div>
+                        <div class="stat-bar"><span style="width: 90%"></span></div>
+                    </div>
+                    <div class="stat-item reveal">
+                        <div class="stat-value" data-count="20" data-suffix="w+">0</div>
+                        <div class="stat-label">团队订阅</div>
+                        <div class="stat-bar"><span style="width: 75%"></span></div>
+                    </div>
+                    <div class="stat-item reveal">
+                        <div class="stat-value" data-count="1000" data-suffix="+">0</div>
+                        <div class="stat-label">上架组件</div>
+                        <div class="stat-bar"><span style="width: 85%"></span></div>
+                    </div>
+                    <div class="stat-item reveal">
+                        <div class="stat-value" data-count="5" data-suffix="年">0</div>
+                        <div class="stat-label">团队历程</div>
+                        <div class="stat-bar"><span style="width: 60%"></span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section about-section" id="about">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="section-tag">ABOUT US</span>
+                    <h2 class="section-title">团队简介</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-subtitle">始创于 2021 年，致力于更好的游戏体验。</p>
+                </div>
+                <div class="about-layout">
+                    <div class="about-visual reveal">
+                        <div class="visual-main">
+                            <div class="floating-cube cube-1"></div>
+                            <div class="floating-cube cube-2"></div>
+                            <div class="floating-cube cube-3"></div>
+                            <div class="visual-center">
+                                <div class="visual-logo">
+                                    <img src="images/sfllogo.webp" alt="极鱼社 Logo" class="visual-logo-img" loading="lazy" decoding="async">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="visual-float-badge badge-left">
+                            <i class="fa-solid fa-download"></i>
+                            <div><strong>2000万+</strong><span>累计下载</span></div>
+                        </div>
+                        <div class="visual-float-badge badge-right">
+                            <i class="fa-solid fa-star"></i>
+                            <div><strong>Top 100</strong><span>2022-2023 排名</span></div>
+                        </div>
+                    </div>
+                    <div class="about-text reveal">
+                        <h3 class="about-title">极鱼社 <span>Swift Fish Lab</span></h3>
+                        <p class="lead">我们始创于 2021 年，是一个主打<strong>皮肤、建筑、Addon 组件</strong>的综合型 Minecraft 开发团队。</p>
+                        <p>同时承接资源定制、免费代投。开发者努力打造相对良心工作室，致力于更好的游戏体验。截止到2026年1月，极鱼社在我的世界中国版累计下载量超过2000万，团队订阅量累计20w+人次，上架组件超过1000款，在2022与2023年度长期排名前百。</p>
+                        <p>团队致力于多元化发展，下设多个创意项目组，旨在为玩家和创作者谋求共同福利。</p>
+                        <div class="about-subteams">
+                            <div class="subteam-chip"><span class="chip-dot" style="background:#f59e0b"></span><span class="chip-name">尚国营建</span><span class="chip-en">古建筑专门建设</span></div>
+                            <div class="subteam-chip"><span class="chip-dot" style="background:#00d4ff"></span><span class="chip-name">HG Studio</span><span class="chip-en">现代建筑建设</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section works-section" id="works">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="section-tag">FEATURED WORKS</span>
+                    <h2 class="section-title">代表作品</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-subtitle">精心打造的每一个作品，都是热爱与匠心的结晶</p>
+                </div>
+
+                <div class="works-category reveal">
+                    <div class="category-label">
+                        <span class="cat-icon"><i class="fa-solid fa-landmark"></i></span>
+                        <h3>建筑作品</h3>
+                        <p>ARCHITECTURE COLLECTION</p>
+                    </div>
+                    <div class="buildings-list" id="buildingsList"></div>
+                </div>
+
+                <div class="works-category reveal" style="--delay: 0.1s">
+                    <div class="category-label">
+                        <span class="cat-icon" style="background:rgba(139, 92, 246, 0.12);color:#8b5cf6"><i class="fa-solid fa-puzzle-piece"></i></span>
+                        <h3>Addon 组件</h3>
+                        <p>ADDON COLLECTION</p>
+                    </div>
+                    <div class="addons-grid" id="addonsGrid"></div>
+                </div>
+
+                <div class="works-category reveal" style="--delay: 0.15s">
+                    <div class="category-label">
+                        <span class="cat-icon" style="background:rgba(16, 185, 129, 0.12);color:#10b981"><i class="fa-solid fa-map-location-dot"></i></span>
+                        <h3>玩法地图</h3>
+                        <p>ADVENTURE MAPS</p>
+                    </div>
+                    <div class="buildings-list" id="mapsList"></div>
+                </div>
+
+                <div class="works-category reveal" style="--delay: 0.2s">
+                    <div class="category-label">
+                        <span class="cat-icon" style="background:rgba(236, 72, 153, 0.12);color:#ec4899"><i class="fa-solid fa-user-group"></i></span>
+                        <h3>皮肤作品</h3>
+                        <p>SKIN COLLECTION</p>
+                    </div>
+                    <div class="skins-showcase">
+                        <div class="skins-track" id="skinsTrack"></div>
+                    </div>
+                    <div class="skins-dots" id="skinsDots"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section services-section" id="services">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="section-tag">OUR SERVICES</span>
+                    <h2 class="section-title">业务服务</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-subtitle">对外开展六大核心业务，覆盖 Minecraft 、ACG创作全生态，点击即可跳转</p>
+                </div>
+                <div class="services-grid" id="servicesGrid"></div>
+            </div>
+        </section>
+
+        <section class="section shop-section" id="shop">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="section-tag">ON SALE</span>
+                    <h2 class="section-title">在售资源</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-subtitle">精选优质资源，超值优惠即刻拥有，下方按钮可直接跳转</p>
+                </div>
+                <div class="shop-grid" id="shopGrid"></div>
+                <div class="shop-channels reveal">
+                    <div class="channel-card channel-afdian">
+                        <div class="channel-icon"><i class="fa-solid fa-heart"></i></div>
+                        <div class="channel-body">
+                            <h4>爱发电平台</h4>
+                            <p>在爱发电选购资源，享受平台保障交易，安全便捷</p>
+                        </div>
+                        <a href="https://ifdian.net/a/xunsheng208322" class="channel-btn" target="_blank" rel="noopener">前往购买 <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                    <div class="channel-card channel-mc">
+                        <div class="channel-icon"><i class="fa-solid fa-cube"></i></div>
+                        <div class="channel-body">
+                            <h4>MC中国版资源大厅</h4>
+                            <p>发布账号：<strong>极鱼社O组</strong>，部分资源同步上架资源大厅，可直接在游戏内购买下载</p>
+                        </div>
+                        <a href="https://mc.163.com/pe/startup/?id=netease&param=%7B%22from%22%3A%20%22profileTeam%22%2C%20%22id%22%3A%20%221627555615%22%7D" class="channel-btn" target="_blank" rel="noopener">前往查看 <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section members-section" id="members">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="section-tag">OUR TEAM</span>
+                    <h2 class="section-title">代表成员列表</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-subtitle">一群热爱 Minecraft 的创作者，用心打造每一个作品</p>
+                </div>
+                <div class="members-grid" id="membersGrid"></div>
+            </div>
+        </section>
+
+        <section class="section feedback-section" id="feedback">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="section-tag">FEEDBACK</span>
+                    <h2 class="section-title">反馈入口</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-subtitle">您的意见是我们进步的动力，欢迎随时与我们交流</p>
+                </div>
+                <div class="feedback-layout">
+                    <div class="feedback-card reveal">
+                        <div class="feedback-icon" style="background:rgba(18, 183, 245, 0.1);color:#12b7f5">
+                            <i class="fa-brands fa-qq"></i>
+                        </div>
+                        <h3>交流 / 反馈 / 定制群</h3>
+                        <p class="feedback-desc">资源反馈、业务咨询、定制服务、免费代投</p>
+                        <div class="qq-big">
+                            <span class="qq-label">QQ 群号</span>
+                            <span class="qq-num">914029611</span>
+                        </div>
+                        <button class="btn btn-primary" onclick="window.open('https://qm.qq.com/q/22asfFbLhC','_blank')">
+                            <i class="fa-brands fa-qq"></i> 一键加入群聊
+                        </button>
+                    </div>
+                    <div class="feedback-card reveal" style="--delay: 0.1s">
+                        <div class="feedback-icon" style="background:rgba(16, 185, 129, 0.1);color:#10b981">
+                            <i class="fa-solid fa-lightbulb"></i>
+                        </div>
+                        <h3>投稿建议</h3>
+                        <p class="feedback-desc">有好的创意或资源想与我们合作？欢迎联系！</p>
+                        <ul class="feedback-list">
+                            <li><i class="fa-solid fa-check"></i> 免费代投服务</li>
+                            <li><i class="fa-solid fa-check"></i> 创意合作项目</li>
+                            <li><i class="fa-solid fa-check"></i> 资源上架推荐</li>
+                            <li><i class="fa-solid fa-check"></i> 专业审核反馈</li>
+                        </ul>
+                        <button class="btn btn-outline" onclick="window.open('https://qm.qq.com/q/22asfFbLhC','_blank')">
+                            <i class="fa-brands fa-qq"></i> 加入群聊
+                        </button>
+                    </div>
+                    <div class="feedback-card reveal" style="--delay: 0.2s">
+                        <div class="feedback-icon" style="background:rgba(245, 158, 11, 0.1);color:#f59e0b">
+                            <i class="fa-solid fa-bug"></i>
+                        </div>
+                        <h3>问题反馈</h3>
+                        <p class="feedback-desc">使用过程中遇到问题或BUG？我们来帮您解决</p>
+                        <ul class="feedback-list">
+                            <li><i class="fa-solid fa-check"></i> 组件使用问题</li>
+                            <li><i class="fa-solid fa-check"></i> 存档兼容性问题</li>
+                            <li><i class="fa-solid fa-check"></i> 购买订单问题</li>
+                            <li><i class="fa-solid fa-check"></i> 其他各类问题</li>
+                        </ul>
+                        <button class="btn btn-outline" onclick="window.open('https://qm.qq.com/q/22asfFbLhC','_blank')">
+                            <i class="fa-brands fa-qq"></i> 加入群聊咨询
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section join-section" id="join">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="section-tag">JOIN US</span>
+                    <h2 class="section-title">加入我们</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-subtitle">与我们一起，创造更多精彩的 Minecraft 作品</p>
+                </div>
+                <div class="join-card reveal">
+                    <div class="join-bg"></div>
+                    <div class="join-content">
+                        <h2>你热爱 Minecraft 创作吗？</h2>
+                        <p>无论你擅长皮肤绘制、建筑建造、Addon开发还是社群运营，<br>我们都欢迎你的加入！与志同道合的伙伴一起成长。</p>
+                        <div class="join-groups">
+                            <div class="join-group-item">
+                                <span class="join-icon"><i class="fa-solid fa-user-plus"></i></span>
+                                <div class="join-group-info">
+                                    <strong>负责人QQ 1</strong>
+                                    <div class="join-group-num" onclick="window.open('https://qm.qq.com/q/pcNCh1Bj2M','_blank')">2176179242 <i class="fa-brands fa-qq"></i></div>
+                                </div>
+                            </div>
+                            <div class="join-group-item">
+                                <span class="join-icon"><i class="fa-solid fa-handshake"></i></span>
+                                <div class="join-group-info">
+                                    <strong>负责人QQ 2</strong>
+                                    <div class="join-group-num" onclick="copyText('83345672')">83345672 <i class="fa-regular fa-copy"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="join-benefits">
+                            <div class="benefit-item"><i class="fa-solid fa-gift"></i> 创作资源支持</div>
+                            <div class="benefit-item"><i class="fa-solid fa-coins"></i> 合理收益分成</div>
+                            <div class="benefit-item"><i class="fa-solid fa-users"></i> 优质团队氛围</div>
+                            <div class="benefit-item"><i class="fa-solid fa-chart-line"></i> 个人成长机会</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section platforms-section">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="section-tag">FOLLOW US</span>
+                    <h2 class="section-title">关注我们</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-subtitle">在各大平台关注极鱼社，获取最新动态</p>
+                </div>
+                <div class="platforms-grid" id="platformsGrid"></div>
+            </div>
+        </section>
+    </main>
+
+    <script src="common.min.js?v=5281cce"></script>
+    <script>
+        try { if (typeof injectLayout === 'function') injectLayout('hero'); } catch(e) { console.warn('布局注入失败:', e); }
+
+        if (typeof SITE_DATA === 'undefined') {
+            console.warn('common.js 未加载，跳过动态渲染。请检查网络连接。');
+        } else {(function(){
+
+        (function() {
+            var grid = document.getElementById('servicesGrid');
+            if (!grid) return;
+            SITE_DATA.SERVICES.forEach(function(s, idx) {
+                var card = document.createElement('a');
+                card.href = s.url || '#services';
+                card.className = 'service-card reveal';
+                card.style.setProperty('--card-color', s.color);
+                card.style.setProperty('--delay', (idx * 0.08) + 's');
+                card.innerHTML =
+                    '<div class="card-shine"></div>' +
+                    '<div class="card-icon"><span class="icon-emoji">' + s.icon + '</span></div>' +
+                    '<div class="card-badge">' + s.badge + '</div>' +
+                    '<h3 class="card-title">' + s.name + '</h3>' +
+                    '<p class="card-desc">' + s.desc + '</p>' +
+                    '<div class="card-features">' + s.features.slice(0, 3).join(' / ') + '</div>' +
+                    '<div class="card-price"><span>' + s.price + '</span></div>';
+                grid.appendChild(card);
+            });
+        })();
+
+        (function() {
+            var list = document.getElementById('buildingsList');
+            if (!list) return;
+            SITE_DATA.WORKS.buildings.forEach(function(b, idx) {
+                var isLeft = idx % 2 === 0;
+                var reservedClass = b.isReserved ? ' reserved' : '';
+                var item = document.createElement('div');
+                item.className = 'building-item reveal ' + (isLeft ? 'left' : 'right') + reservedClass;
+                item.style.setProperty('--delay', (idx * 0.08) + 's');
+                var visualHtml = b.image && !b.isReserved
+                    ? '<img src="' + b.image + '" alt="' + b.title + '" class="building-img" loading="lazy" decoding="async" onerror="this.outerHTML=\'<div class=\\\'building-placeholder\\\'><i class=\\\'fa-solid ' + b.icon + '\\\'></i></div>\'">'
+                    : '<div class="building-placeholder' + (b.isReserved ? ' empty' : '') + '"><i class="fa-solid ' + b.icon + '"></i>' + (b.isReserved ? '<span class=\\\'empty-label\\\'>图片预留位</span>' : '') + '</div>';
+                item.innerHTML =
+                    '<div class="building-visual">' +
+                    visualHtml +
+                    '<span class="building-category">' + b.category + '</span>' +
+                    (b.isReserved ? '<span class="reserved-badge">即将上线</span>' : '') +
+                    '</div>' +
+                    '<div class="building-info">' +
+                    '<span class="building-subtitle">' + b.subtitle + '</span>' +
+                    '<h3>' + b.title + '</h3>' +
+                    '<p>' + b.desc + '</p>' +
+                    '<div class="building-tags">' + b.tags.map(function(t){return '<span>'+t+'</span>';}).join('') + '</div>' +
+                    '<span class="work-author">作者：' + (b.author || '——') + '</span>' +
+                    '</div>';
+                list.appendChild(item);
+            });
+        })();
+
+        (function() {
+            var grid = document.getElementById('addonsGrid');
+            if (!grid) return;
+            SITE_DATA.WORKS.addons.forEach(function(a, idx) {
+                var reservedClass = a.isReserved ? ' reserved' : '';
+                var layoutClass = a.layout === 'wide' ? 'wide' : (a.layout === 'square' ? 'square' : '');
+                var item = document.createElement('div');
+                item.className = 'addon-item reveal ' + layoutClass + reservedClass;
+                item.style.setProperty('--delay', (idx * 0.06) + 's');
+                var visualHtml = a.image && !a.isReserved
+                    ? '<img src="' + a.image + '" alt="' + a.title + '" class="addon-img" loading="lazy" decoding="async" onerror="this.outerHTML=\'<div class=\\\'addon-placeholder\\\'><i class=\\\'fa-solid ' + a.icon + '\\\'></i></div>\'">'
+                    : '<div class="addon-placeholder' + (a.isReserved ? ' empty' : '') + '"><i class="fa-solid ' + a.icon + '"></i>' + (a.isReserved ? '<span class=\\\'empty-label\\\'>图片预留位</span>' : '') + '</div>';
+                item.innerHTML =
+                    '<div class="addon-visual">' +
+                    visualHtml +
+                    '<span class="addon-category">' + a.category + '</span>' +
+                    (a.isReserved ? '<span class="reserved-badge">即将上线</span>' : '') +
+                    '</div>' +
+                    '<div class="addon-info">' +
+                    '<span class="addon-subtitle">' + a.subtitle + '</span>' +
+                    '<h4>' + a.title + '</h4>' +
+                    '<p>' + a.desc + '</p>' +
+                    '<div class="addon-tags">' + a.tags.map(function(t){return '<span>'+t+'</span>';}).join('') + '</div>' +
+                    '<span class="work-author">作者：' + (a.author || '——') + '</span>' +
+                    '</div>';
+                grid.appendChild(item);
+            });
+        })();
+
+        (function() {
+            var list = document.getElementById('mapsList');
+            if (!list) return;
+            SITE_DATA.WORKS.maps.forEach(function(m, idx) {
+                var isLeft = idx % 2 === 0;
+                var reservedClass = m.isReserved ? ' reserved' : '';
+                var item = document.createElement('div');
+                item.className = 'building-item reveal ' + (isLeft ? 'left' : 'right') + reservedClass;
+                item.style.setProperty('--delay', (idx * 0.08) + 's');
+                var visualHtml = m.image && !m.isReserved
+                    ? '<img src="' + m.image + '" alt="' + m.title + '" class="building-img" loading="lazy" decoding="async" onerror="this.outerHTML=\'<div class=\\\'building-placeholder\\\'><i class=\\\'fa-solid ' + m.icon + '\\\'></i></div>\'">'
+                    : '<div class="building-placeholder' + (m.isReserved ? ' empty' : '') + '"><i class="fa-solid ' + m.icon + '"></i>' + (m.isReserved ? '<span class=\\\'empty-label\\\'>图片预留位</span>' : '') + '</div>';
+                item.innerHTML =
+                    '<div class="building-visual">' +
+                    visualHtml +
+                    '<span class="building-category">' + m.category + '</span>' +
+                    (m.isReserved ? '<span class="reserved-badge">即将上线</span>' : '') +
+                    '</div>' +
+                    '<div class="building-info">' +
+                    '<span class="building-subtitle">' + m.subtitle + '</span>' +
+                    '<h3>' + m.title + '</h3>' +
+                    '<p>' + m.desc + '</p>' +
+                    '<div class="building-tags">' + m.tags.map(function(t){return '<span>'+t+'</span>';}).join('') + '</div>' +
+                    '<span class="work-author">作者：' + (m.author || '——') + '</span>' +
+                    '</div>';
+                list.appendChild(item);
+            });
+        })();
+
+        (function() {
+            var track = document.getElementById('skinsTrack');
+            var dotsContainer = document.getElementById('skinsDots');
+            if (!track) return;
+            var skins = SITE_DATA.WORKS.skins;
+            var totalSkins = skins.length;
+
+            var allSkins = skins.concat(skins).concat(skins);
+            allSkins.forEach(function(s, idx) {
+                var card = document.createElement('div');
+                card.className = 'skin-card';
+                var imgHtml = s.image
+                    ? '<img src="' + s.image + '" alt="' + s.title + '" class="skin-img" loading="lazy" decoding="async" onerror="this.outerHTML=\'<div class=\\\'skin-img-placeholder\\\'><i class=\\\'fa-solid fa-user\\\'></i><span class=\\\'ph-label\\\'>图片预留位</span></div>\'">'
+                    : '<div class="skin-img-placeholder"><i class="fa-solid fa-user"></i><span class="ph-label">图片预留位</span></div>';
+                card.innerHTML =
+                    imgHtml +
+                    '<div class="skin-overlay">' +
+                    '  <span class="skin-category">' + s.category + '</span>' +
+                    '  <h5>' + s.title + '</h5>' +
+                    '  <div class="skin-author"><i class="fa-solid fa-pen-nib"></i><span>' + (s.author || '极鱼社·皮肤组') + '</span></div>' +
+                    '</div>';
+                track.appendChild(card);
+            });
+
+            function getStep() {
+                var cards = track.querySelectorAll('.skin-card');
+                if (cards.length < 2) return 328;
+                return cards[1].getBoundingClientRect().left - cards[0].getBoundingClientRect().left;
+            }
+
+            var allDots = [];
+            var activeDotIdx = 0;
+            if (dotsContainer) {
+                skins.forEach(function(s, idx) {
+                    var dot = document.createElement('button');
+                    dot.className = 'skin-dot' + (idx === 0 ? ' active' : '');
+                    dot.setAttribute('aria-label', s.title);
+                    dot.addEventListener('click', function() { goToSkin(idx); });
+                    dotsContainer.appendChild(dot);
+                    allDots.push(dot);
+                });
+            }
+
+            function updateDots(virtualIdx) {
+                if (!allDots.length) return;
+                var idx = Math.round(virtualIdx) % totalSkins;
+                if (idx < 0) idx += totalSkins;
+                if (idx !== activeDotIdx) {
+                    activeDotIdx = idx;
+                    allDots.forEach(function(d, i) { d.classList.toggle('active', i === activeDotIdx); });
+                }
+            }
+
+            var virtualIndex = totalSkins;
+            var speed = 1.6;
+            var paused = false;
+            var manualTarget = null;
+            var resumeTimer = null;
+
+            function goToSkin(idx) {
+                manualTarget = totalSkins + idx;
+                clearTimeout(resumeTimer);
+                resumeTimer = setTimeout(function() { manualTarget = null; }, 5000);
+            }
+
+            function animate() {
+                if (!paused) {
+                    var step = getStep();
+
+                    if (manualTarget !== null) {
+                        var diff = manualTarget - virtualIndex;
+                        if (Math.abs(diff) < 0.03) {
+                            virtualIndex = manualTarget;
+                            manualTarget = null;
+                        } else {
+                            virtualIndex += diff * 0.1;
+                        }
+                    } else {
+                        virtualIndex += speed / step;
+                    }
+
+                    while (virtualIndex >= totalSkins * 2) virtualIndex -= totalSkins;
+                    while (virtualIndex < totalSkins)     virtualIndex += totalSkins;
+
+                    track.style.transform = 'translateX(' + (-virtualIndex * step) + 'px)';
+                    updateDots(virtualIndex);
+                }
+                requestAnimationFrame(animate);
+            }
+
+            track.addEventListener('mouseenter', function() { paused = true; });
+            track.addEventListener('mouseleave', function() { paused = false; });
+            if (dotsContainer) {
+                dotsContainer.addEventListener('mouseenter', function() { paused = true; });
+                dotsContainer.addEventListener('mouseleave', function() { paused = false; });
+            }
+
+            requestAnimationFrame(animate);
+        })();
+
+        (function() {
+            var grid = document.getElementById('shopGrid');
+            if (!grid) return;
+            SITE_DATA.SHOP_ITEMS.forEach(function(p, idx) {
+                var item = document.createElement('div');
+                item.className = 'shop-item reveal';
+                item.style.setProperty('--delay', (idx * 0.08) + 's');
+                var tagHtml = p.tag ? '<span class="shop-tag" style="background:' + p.tagColor + '">' + p.tag + '</span>' : '';
+                var visualHtml = p.image
+                    ? '<img src="' + p.image + '" alt="' + p.title + '" class="shop-img" loading="lazy" decoding="async" onerror="this.outerHTML=\'<div class=\\\'shop-img-ph\\\'><i class=\\\'fa-solid ' + p.icon + '\\\'></i></div>\'">'
+                    : '<div class="shop-img-ph"><i class="fa-solid ' + p.icon + '"></i></div>';
+                item.innerHTML =
+                    '<div class="shop-visual">' +
+                    '  ' + visualHtml +
+                    '  ' + tagHtml +
+                    '</div>' +
+                    '<div class="shop-info">' +
+                    '  <span class="shop-cat">' + p.category + '</span>' +
+                    '  <h3>' + p.title + '</h3>' +
+                    '  <p>' + p.desc + '</p>' +
+                    '  <div class="shop-price-row">' +
+                    '    <span class="shop-price">' + p.price + '</span>' +
+                    '    <span class="shop-original">' + p.original + '</span>' +
+                    '  </div>' +
+                    '</div>';
+                grid.appendChild(item);
+            });
+        })();
+
+        (function() {
+            var grid = document.getElementById('membersGrid');
+            if (!grid) return;
+            SITE_DATA.MEMBERS.forEach(function(m, idx) {
+                var card = document.createElement('div');
+                card.className = 'member-card reveal';
+                card.style.setProperty('--delay', (idx * 0.06) + 's');
+                card.style.setProperty('--m-color', m.color);
+                var visualHtml = m.image
+                    ? '<div class="member-visual">' +
+                      '  <img src="' + m.image + '" alt="' + m.name + '" loading="lazy" decoding="async" onerror="this.outerHTML=\'<div class=\\\'member-ph-avatar\\\'><i class=\\\'' + m.avatar + '\\\'></i></div>\'">' +
+                      '</div>'
+                    : '<div class="member-visual"><div class="member-ph-avatar"><i class="' + m.avatar + '"></i></div></div>';
+                card.innerHTML =
+                    visualHtml +
+                    '<div class="member-info">' +
+                    '  <h3>' + m.name + '</h3>' +
+                    '  <span class="member-role">' + m.role + '</span>' +
+                    '  <p>' + m.desc.replace(/\n/g, '<br>') + '</p>' +
+                    (m.links ? '<div class="member-links">' + m.links.map(function(l) { return '<a href="' + l.url + '" target="_blank" rel="noopener" class="member-link-btn ' + (l.class||'') + '" title="' + l.name + '"><i class="' + l.icon + '"></i></a>'; }).join('') + '</div>' : '') +
+                    '</div>';
+                grid.appendChild(card);
+            });
+        })();
+
+        (function() {
+            var grid = document.getElementById('platformsGrid');
+            if (!grid) return;
+            SITE_DATA.PLATFORMS.forEach(function(p, idx) {
+                var card = document.createElement('a');
+                card.href = p.url;
+                card.className = 'platform-card reveal';
+                card.style.setProperty('--p-color', p.color);
+                card.style.setProperty('--delay', (idx * 0.06) + 's');
+                card.target = '_blank';
+                card.rel = 'noopener';
+                card.innerHTML =
+                    '<div class="platform-icon" style="color:' + p.color + '"><i class="' + p.icon + '"></i></div>' +
+                    '<div class="platform-info"><h4>' + p.name + '</h4><span>' + p.type + '</span></div>' +
+                    '<i class="fa-solid fa-arrow-up-right-from-square platform-arrow"></i>';
+                grid.appendChild(card);
+            });
+        })();
+
+    })();
+    }
+    </script>
+    <script src="script.min.js?v=5281cce"></script>
+</body>
+</html>
