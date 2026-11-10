@@ -20,7 +20,7 @@ if defined HAS_PROXY (
 )
 echo.
 
-echo [1/3] Syncing files to public\ ...
+echo [1/4] Syncing files to public\ ...
 copy /Y index.html public\  >nul
 copy /Y partners.html public\  >nul
 copy /Y common.min.js public\  >nul
@@ -51,6 +51,23 @@ popd
 
 echo.
 if "%RESULT%"=="0" (
+  echo [4/4] Git backup: commit and push to GitHub...
+  git add -A >nul 2>&1
+  git commit -m "chore(deploy): auto backup after Vercel publish" >nul 2>&1
+  if errorlevel 1 (
+    echo       Nothing changed since last commit, skipped.
+  ) else (
+    echo       Committed locally.
+  )
+  git push origin HEAD >nul 2>&1
+  if errorlevel 1 (
+    echo       [WARN] Push failed - GitHub unreachable or proxy off.
+    echo       The live site is already updated. Retry later from this folder:
+    echo         git push origin HEAD
+  ) else (
+    echo       Pushed to GitHub as backup.
+  )
+  echo.
   echo Deploy finished successfully.
   echo https://www.swiftfishlab.cn
 ) else (

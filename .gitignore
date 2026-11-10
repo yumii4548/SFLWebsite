@@ -13,6 +13,7 @@ Desktop.ini
 .cf-token
 *.tmp
 *.log
+*.bak
 
 # dependencies
 node_modules/
