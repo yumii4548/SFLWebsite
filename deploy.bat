@@ -35,7 +35,7 @@ robocopy css public\css /E /NFL /NDL /NJH >nul
 robocopy webfonts public\webfonts /E /NFL /NDL /NJH >nul
 echo Sync done.
 
-echo [2/3] Environment check...
+echo [2/4] Environment check...
 where vercel >nul 2>&1
 if errorlevel 1 (
   echo [ERROR] vercel command not found. Run once: npm i -g vercel
@@ -43,7 +43,7 @@ if errorlevel 1 (
   exit /b 1
 )
 
-echo [3/3] Deploying to Vercel production (project root = public\)...
+echo [3/4] Deploying to Vercel production (project root = public\)...
 pushd public
 call vercel --prod --yes --archive=tgz
 set "RESULT=%ERRORLEVEL%"
