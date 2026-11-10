@@ -15,12 +15,12 @@
     };
 
     var SERVICES = [
-        { id: 'skinsubmit', icon: '📤', name: '授权原创皮肤代投', subtitle: 'SKIN SUBMISSION SERVICE', desc: '提供授权皮肤代投服务，应用自研快速渲染包装提审系统，专业对接MC开发者平台审核通道，高效稳定，让你的皮肤作品快速上架。', features: ['自研自动化工具', '账号矩阵排列', '快速上架', '全程跟踪反馈'], price: '免费', badge: 'NEW', color: '#ec4899', url: 'https://wj.qq.com/s2/14959219/elqb/' },
-        { id: 'skin', icon: '🎨', name: 'MC 皮肤定制', subtitle: 'SKIN CUSTOMIZATION', desc: '打造独一无二的皮肤，涵盖多种风格，从可爱萌系到硬核战斗，总有一款适合你，支持商用及买断，网易/基岩/Java版本通用。', features: ['皮肤设计', '贴图定制', '定制化修改', '版本通用'], price: '¥20 起', badge: 'POPULAR', color: '#00d4ff', url: 'https://qm.qq.com/q/CxSaz8xFRK' },
-        { id: 'build', icon: '🏛️', name: '建筑承包', subtitle: 'ARCHITECTURE CONTRACTING', desc: '精美像素建筑，涵盖古风建筑与现代都市，从单体景观到完整城市规划，专业团队施工建造。', features: ['古建筑群建造', '现代建筑设计', '大型地图规划', '服务器主城建设'], price: '面议', badge: 'HOT', color: '#7c3aed', url: 'https://qm.qq.com/q/jx37nUpcBy' },
-        { id: 'crossversion', icon: '🔄', name: '全版本存档互通', subtitle: 'CROSS-VERSION MIGRATION', desc: '专业的 Minecraft 存档转换服务，实现Java/中国版/基岩版各版本间存档互通，让你的建筑跨越版本限制。', features: ['基岩版转Java版', 'Java版转基岩版', '版本升级降级', '中国版存档导入导出'], price: '¥18 ', badge: 'HOT', color: '#f59e0b', url: 'https://docs.qq.com/doc/DVmhJQ3VLWWVzbHZH' },
-        { id: 'pixel', icon: '✨', name: '拼豆像素画图纸', subtitle: 'PIXEL ART BLUEPRINT', desc: '承接拼豆板52钉及以下尺寸图纸定制，可根据MC皮肤设计大头拼豆图纸，含双层差分及合成，附带详细制作说明。', features: ['像素拼豆图纸', '调色板优化', '皮肤设计拼豆图纸', '制作教程附带'], price: '¥10 起', badge: 'UNIQUE', color: '#10b981', url: 'https://qm.qq.com/q/jx37nUpcBy' },
-        { id: 'vocaloid', icon: '🎶', name: 'Vocaloid 音乐企划', subtitle: 'VOCALOID PROJECT', desc: 'Vocaloid 相关音乐创作企划，涵盖原创/同人填词创作与调音制作，用虚拟歌声演绎独特音乐故事。【需自带调音引擎】', features: ['原创填词创作', 'Vocaloid 调音', '同人曲改编', '原创音乐作词'], price: '面议', badge: 'UNIQUE', color: '#06b6d4', url: 'https://space.bilibili.com/1327449089' }
+        { id: 'skinsubmit', icon: 'fa-solid fa-arrow-up-right-from-square', name: '授权原创皮肤代投', subtitle: 'SKIN SUBMISSION SERVICE', desc: '提供授权皮肤代投服务，应用自研快速渲染包装提审系统，专业对接MC开发者平台审核通道，高效稳定，让你的皮肤作品快速上架。', features: ['自研自动化工具', '账号矩阵排列', '快速上架', '全程跟踪反馈'], price: '免费', badge: 'NEW', color: '#ec4899', url: 'https://wj.qq.com/s2/14959219/elqb/' },
+        { id: 'skin', icon: 'fa-solid fa-palette', name: 'MC 皮肤定制', subtitle: 'SKIN CUSTOMIZATION', desc: '打造独一无二的皮肤，涵盖多种风格，从可爱萌系到硬核战斗，总有一款适合你，支持商用及买断，网易/基岩/Java版本通用。', features: ['皮肤设计', '贴图定制', '定制化修改', '版本通用'], price: '¥20 起', badge: 'POPULAR', color: '#00d4ff', url: 'https://qm.qq.com/q/CxSaz8xFRK' },
+        { id: 'build', icon: 'fa-solid fa-landmark', name: '建筑承包', subtitle: 'ARCHITECTURE CONTRACTING', desc: '精美像素建筑，涵盖古风建筑与现代都市，从单体景观到完整城市规划，专业团队施工建造。', features: ['古建筑群建造', '现代建筑设计', '大型地图规划', '服务器主城建设'], price: '面议', badge: 'HOT', color: '#7c3aed', url: 'https://qm.qq.com/q/jx37nUpcBy' },
+        { id: 'crossversion', icon: 'fa-solid fa-copy', name: '全版本存档互通', subtitle: 'CROSS-VERSION MIGRATION', desc: '专业的 Minecraft 存档转换服务，实现Java/中国版/基岩版各版本间存档互通，让你的建筑跨越版本限制。', features: ['基岩版转Java版', 'Java版转基岩版', '版本升级降级', '中国版存档导入导出'], price: '¥18 ', badge: 'HOT', color: '#f59e0b', url: 'https://docs.qq.com/doc/DVmhJQ3VLWWVzbHZH' },
+        { id: 'pixel', icon: 'fa-solid fa-paintbrush', name: '拼豆像素画图纸', subtitle: 'PIXEL ART BLUEPRINT', desc: '承接拼豆板52钉及以下尺寸图纸定制，可根据MC皮肤设计大头拼豆图纸，含双层差分及合成，附带详细制作说明。', features: ['像素拼豆图纸', '调色板优化', '皮肤设计拼豆图纸', '制作教程附带'], price: '¥10 起', badge: 'UNIQUE', color: '#10b981', url: 'https://qm.qq.com/q/jx37nUpcBy' },
+        { id: 'vocaloid', icon: 'fa-solid fa-music', name: 'Vocaloid 音乐企划', subtitle: 'VOCALOID PROJECT', desc: 'Vocaloid 相关音乐创作企划，涵盖原创/同人填词创作与调音制作，用虚拟歌声演绎独特音乐故事。【需自带调音引擎】', features: ['原创填词创作', 'Vocaloid 调音', '同人曲改编', '原创音乐作词'], price: '面议', badge: 'UNIQUE', color: '#06b6d4', url: 'https://space.bilibili.com/1327449089' }
     ];
 
     var WORKS = {
@@ -43,13 +43,14 @@
         addons: [
             { id: 'binfentangzixingche', title: '缤纷糖自行车', subtitle: 'Candy Bike Addon', category: 'Addon · 载具', desc: '糖果主题自行车载具，缤纷色彩搭配多种皮肤，拥有完整的骑行动画和机制，让你的MC世界充满甜蜜与活力。', layout: 'wide', tags: ['#载具', '#Addon', '#可爱'], icon: 'fa-bicycle', image: 'images/binfentangzixingche.webp', author: '元谋YUMI' },
             { id: 'fugukehuanzaijubao', title: '复古科幻载具包', subtitle: 'Retro Sci-Fi Vehicles', category: 'Addon · 载具包', desc: '资源包包含3辆核动力驱动的科幻载具，造型设计起源于50年代，代表人们对未来的向往和幻想。部分车辆有背景音乐，车子有两百点血量。', layout: 'wide', tags: ['#载具', '#科幻', '#Addon'], icon: 'fa-rocket', image: 'images/fugukehuanzaijubao.webp', author: 'Kino' },
-            { id: 'paopaochuan', title: '泡泡船', subtitle: 'Bubble Boat', category: 'Addon · 载具', desc: '以动漫海绵宝宝为创意打造的可爱海洋主题小船，可在水面自由航行，产生泡泡粒子效果，冒险必备萌系载具。', layout: 'wide', tags: ['#载具', '#Addon', '#海洋'], icon: 'fa-ship', image: 'images/paopaochuan.webp', author: '元谋YUMI' },
-            { id: 'yuanbanshengwuqicheng', title: '更好的原版生物可骑乘', subtitle: 'Original version of creature mountable', category: 'Addon · 生物增强', desc: '原版全部生物新增驯化骑乘属性，骑乘任意你喜欢的生物遨游世界，甚至在夜幕降临时骑乘幻翼遨游天空，部分生物还有物品栏属性哦！', layout: 'wide', tags: ['#生物', '#生存', '#Addon'], icon: 'fa-dragon', image: 'images/yuanbanshengwuqicheng.webp', author: '元谋YUMI' },
-            { id: 'reserved-addon-1', title: '中式家具 · 正式版', subtitle: 'Chinese Style Furniture', category: 'Addon · 家具', desc: '模组新增十余款精致中式古风家具，包含桌椅、屏风、灯笼、花窗等摆件，打造古韵内饰，轻松搭建国风宅院。', layout: 'wide', tags: ['#中式', '#家具', '#装饰'], icon: 'fa-gears', image: 'images/zsjj.webp', author: '浔昇' },
-            { id: 'reserved-addon-2', title: '唱片型音乐播放器- 路灯原创音乐包', subtitle: 'Ludeng Original Music Pack', category: 'Addon · 唱片音乐包', desc: 'SFL与R.A.D Music Club联手推出的唱片音乐模组，新增8首原创曲目，30格内可立体听音，音频均拥有完整版权，生存模式即可制作播放器，拥有独立歌词本可对照。', layout: 'wide', tags: ['#原创', '#音乐', '#播放器'], icon: 'fa-gears', image: 'images/ld.webp', author: 'A_路灯、元谋YUMI' },
-            { id: 'reserved-addon-3', title: '元宵花灯', subtitle: 'Yuanxiao Lantern', category: 'Addon · 装饰', desc: '新增数十款款国风元宵花灯！梅兰竹菊、牡丹纹样一应俱全。精致立体模型，流苏飘逸，装点古风庭院、古镇街巷，灯火盈盈，为你的世界增添浓浓中式佳节氛围。', layout: 'wide', tags: ['#中式', '#装饰', '#摆件'], icon: 'fa-gears', image: 'images/huadeng.webp', author: '浔昇' },
-            { id: 'reserved-addon-4', title: '【像素拼豆】Mard全系291色建筑方块拓展包', subtitle: ' Mard Full Series 291-Color Building Block Expansion Pack', category: 'Addon · 建筑拓展', desc: '以 Mard 拼豆全套 291 色标准色谱为灵感 1:1 复刻，新增 15 大类色号合计 291 款纯色方块，彻底填补原版色彩空白；支持聊天栏输入色号一键获取、批量多重取件，内附说明书与图纸，适配像素画、彩绘、造景等全部建造场景。', layout: 'wide', tags: ['#像素', '#拼豆', '#内置内容'], icon: 'fa-gears', image: 'images/pd.webp', author: '元谋YUMI' },
-            { id: 'reserved-addon-5', title: '灯火璀璨 - 元宵', subtitle: 'Bright Lights - Yuanxiao', category: 'Addon · 装饰', desc: '极鱼社2025元宵主题组件！多款复古传统花灯各具特色，匠心还原中式古灯造型。悬于长街楼阁，星火点点，在方块世界重现上元灯会的繁华盛景。', layout: 'wide', tags: ['#节日', '#元宵', '#拓展'], icon: 'fa-gears', image: 'images/dhcc.webp', author: '浔昇、元谋YUMI' },
+            { id: 'reserved-addon-1', title: '中式家具 · 正式版', subtitle: 'Chinese Style Furniture', category: 'Addon · 家具', desc: '模组新增十余款精致中式古风家具，包含桌椅、屏风、灯笼、花窗等摆件，打造古韵内饰，轻松搭建国风宅院。', layout: 'landscape', tags: ['#中式', '#家具', '#装饰'], icon: 'fa-gears', image: 'images/zsjj.webp', author: '浔昇' },
+            { id: 'reserved-addon-4', title: '【像素拼豆】Mard全系291色建筑方块拓展包', subtitle: ' Mard Full Series 291-Color Building Block Expansion Pack', category: 'Addon · 建筑拓展', desc: '以 Mard 拼豆全套 291 色标准色谱为灵感 1:1 复刻，新增 15 大类色号合计 291 款纯色方块，彻底填补原版色彩空白；支持聊天栏输入色号一键获取、批量多重取件，内附说明书与图纸，适配像素画、彩绘、造景等全部建造场景。', layout: 'landscape', tags: ['#像素', '#拼豆', '#内置内容'], icon: 'fa-gears', image: 'images/pd.webp', author: '元谋YUMI' },
+            { id: 'tdsw', title: '头顶生物', subtitle: 'Head-top Creatures', category: 'Addon · 生物随宠', desc: '以「原版生物头顶随宠」为创作灵感，新增四十余种涵盖动物、敌对生物、水生生物的头顶随宠，均拥有独立动画与专属机制：装配水系生物可获水下呼吸，装配敌对生物可提升血量上限或附加空手火焰，还可解锁层层叠叠的「套娃玩法」。所有随宠均支持生存合成，填补原版生存的陪伴空白。', layout: 'wide', tags: ['#可爱', '#真实', '#陪伴'], icon: 'fa-frog', image: 'images/tdsw.webp', author: '元谋YUMI' },
+            { id: 'reserved-addon-3', title: '元宵花灯', subtitle: 'Yuanxiao Lantern', category: 'Addon · 装饰', desc: '新增数十款款国风元宵花灯！梅兰竹菊、牡丹纹样一应俱全。精致立体模型，流苏飘逸，装点古风庭院、古镇街巷，灯火盈盈，为你的世界增添浓浓中式佳节氛围。', layout: 'square', tags: ['#中式', '#装饰', '#摆件'], icon: 'fa-gears', image: 'images/huadeng.webp', author: '浔昇' },
+            { id: 'reserved-addon-2', title: '唱片型音乐播放器- 路灯原创音乐包', subtitle: 'Ludeng Original Music Pack', category: 'Addon · 唱片音乐包', desc: 'SFL与R.A.D Music Club联手推出的唱片音乐模组，新增8首原创曲目，30格内可立体听音，音频均拥有完整版权，生存模式即可制作播放器，拥有独立歌词本可对照。', layout: 'landscape', tags: ['#原创', '#音乐', '#播放器'], icon: 'fa-gears', image: 'images/ld.webp', author: 'A_路灯、元谋YUMI' },
+            { id: 'yuanbanshengwuqicheng', title: '更好的原版生物可骑乘', subtitle: 'Original version of creature mountable', category: 'Addon · 生物增强', desc: '原版全部生物新增驯化骑乘属性，骑乘任意你喜欢的生物遨游世界，甚至在夜幕降临时骑乘幻翼遨游天空，部分生物还有物品栏属性哦！', layout: 'landscape', tags: ['#生物', '#生存', '#Addon'], icon: 'fa-dragon', image: 'images/yuanbanshengwuqicheng.webp', author: '元谋YUMI' },
+            { id: 'paopaochuan', title: '泡泡船', subtitle: 'Bubble Boat', category: 'Addon · 载具', desc: '以动漫海绵宝宝为创意打造的可爱海洋主题小船，可在水面自由航行，产生泡泡粒子效果，冒险必备萌系载具。', layout: 'landscape', tags: ['#载具', '#Addon', '#海洋'], icon: 'fa-ship', image: 'images/paopaochuan.webp', author: '元谋YUMI' },
+            { id: 'reserved-addon-5', title: '灯火璀璨 - 元宵', subtitle: 'Bright Lights - Yuanxiao', category: 'Addon · 装饰', desc: '极鱼社2025元宵主题组件！多款复古传统花灯各具特色，匠心还原中式古灯造型。悬于长街楼阁，星火点点，在方块世界重现上元灯会的繁华盛景。', layout: 'landscape', tags: ['#节日', '#元宵', '#拓展'], icon: 'fa-gears', image: 'images/dhcc.webp', author: '浔昇、元谋YUMI' },
             { id: 'reserved-addon-6', title: '更多精细人模盔甲架', subtitle: 'More detailed human model armor stands', category: 'Addon · 角色', desc: '升级优化盔甲架模型，拥有生动人形外观。自由摆放姿态，陈列武器、套装，用于展厅布景、商铺装饰，打造精致方块场景。', layout: 'square', tags: ['#角色', '#美化', '#真实'], icon: 'fa-gears', image: 'images/kjj.webp', author: 'SFL皮肤组、元谋YUMI' }
         ],
         skins: [
@@ -110,25 +111,19 @@
 
     var PARTNERS = [
         { name: '上海熵联天创网络科技有限公司', en: 'Entropy Link Tianchuang', type: '合作组织', desc: '熵联天创，游戏开发团队，成立于2025年6月18日，致力于制作有趣好玩的作品，营造良好的团队环境。代表作品《邻家之钥》。是极鱼社战略合作伙伴。', url: 'https://tianentropy.cn/', color: '#f59e0b', logo: 'fa-solid fa-chess-rook', image: 'images/tpy.webp' },
+        { name: 'MewBaka笨猫工作室', en: 'MewBaka Studio', type: '合作组织', desc: 'MewBaka笨猫工作室，成立于2024年7月。主要开发视觉小说游戏及开发产品。现正制作一款为视觉小说创作打造的现代游戏引擎——NarraLeaf Project。', url: 'https://www.mewbaka.cn/', color: '#f97316', logo: 'fa-solid fa-cat', image: 'images/mewbaka.webp' },
         { name: '宙鱼文化工作室', en: 'Zhouyu Culture Studio', type: '合作组织', desc: '宙鱼网络工作室，成立于2020年6月，至今旗下三名直属开发者，两名合作开发者，总发表组件450+，专业与广告设计、新媒体运营、文创宣发等 咨询联系:CBUAD@qq.com。', url: 'https://cbuad.net/', color: '#0ea5e9', logo: 'fa-solid fa-city', image: 'images/cnzy.webp' },
         { name: 'Realize a Dream Music Club', en: 'R.A.D Music Club', type: '创作联盟', desc: 'R.A.D. Music Club是一家立足于全球视野、面向未来的音乐团队，与极鱼社联手创作原创歌曲。', url: 'https://space.bilibili.com/105791477', color: '#ec4899', logo: 'fa-solid fa-palette', image: 'images/radlogo.webp' },
         { name: '云筑设计团队', en: 'Cloud Pavilion Work', type: '建筑团队', desc: '云筑设计团队由HOYSH创立，成立于2026年3月12日，主营现代式建筑，代表作：《天宗市》《希伦市》《像素大同系列》《像素深圳》', url: 'https://v.douyin.com/8_n7XMWClPc/', color: '#8b5cf6', logo: 'fa-solid fa-microchip', image: 'images/yzlogo.webp' },
-        { name: '鸽予文化', en: 'Ge Yu Culture', type: '合作组织', desc: '上海鸽予文化有限公司，成立于2024年12月，主业为新媒体宣发及文化设计，与多名创作者展开合作，旗下鸽予工作室主营游戏《我的世界》相关物料制作。', url: '#', color: '#10b981', logo: 'fa-solid fa-cubes', image: 'images/gy.webp' },
-        { name: '宇创领航工作室', en: 'YuChuang Studio', type: '合作组织', desc: '宇创领航是《我的世界》中国版综合开发工作室，深耕网易版生态，主营模组、光影、城市还原地图创作。擅长轨道交通、都市建造模组，代表作有像素邯郸、轨道交通模组、校园组件，还自研多种应用和游戏，兼顾创作与新人培育，全网传播热度较高。', url: 'https://vhwork.cn/', color: '#94a3b8', logo: 'fa-solid fa-handshake', image: 'images/yclh.webp' },
-        { name: 'MewBaka笨猫工作室', en: 'MewBaka Studio', type: '合作组织', desc: 'MewBaka笨猫工作室，成立于2024年7月。主要开发视觉小说游戏及开发产品。现正制作一款为视觉小说创作打造的现代游戏引擎——NarraLeaf Project。', url: 'https://www.mewbaka.cn/', color: '#f97316', logo: 'fa-solid fa-cat', image: 'images/mewbaka.webp' },
-        { name: '雨夜街水泥钟表', en: 'Rain Water', type: '合作组织', desc: '雨夜街水泥钟表（雨夜街）成立于2025年6月8日，以文字设计为核心业务，理念是“梦想优先，创作自由”。目前雨夜街的主要方向是ACG文字冒险类游戏。', url: '#', color: '#5b9bd5', logo: 'fa-solid fa-clock', image: 'images/yyj.webp' }
-    ];
+        { name: '雨夜街水泥钟表', en: 'Rain Water', type: '合作组织', desc: '雨夜街水泥钟表（雨夜街）成立于2025年6月8日，以文字设计为核心业务，理念是“梦想优先，创作自由”。目前雨夜街的主要方向是ACG文字冒险类游戏。', url: '#', color: '#5b9bd5', logo: 'fa-solid fa-clock', image: 'images/yyj.webp' }    ];
 
     var FRIEND_LINKS = [
         { name: '上海熵联天创', url: 'https://tianentropy.cn/', desc: '独立游戏开发团队', icon: 'fa-solid fa-gamepad', color: '#f59e0b' },
+        { name: 'MewBaka笨猫工作室', url: 'https://www.mewbaka.cn/', desc: '视觉小说游戏引擎开发', icon: 'fa-solid fa-cat', color: '#f97316' },
         { name: '宙鱼文化工作室', url: 'https://cbuad.net/', desc: '新媒体运营与文创宣发', icon: 'fa-solid fa-city', color: '#0ea5e9' },
         { name: 'R.A.D Music Club', url: 'https://space.bilibili.com/105791477', desc: '全球视野音乐团队', icon: 'fa-solid fa-music', color: '#ec4899' },
         { name: '云筑设计团队', url: 'https://v.douyin.com/8_n7XMWClPc/', desc: '现代式建筑团队', icon: 'fa-solid fa-building', color: '#8b5cf6' },
-        { name: '鸽予文化', url: '#', desc: '新媒体宣发及文化设计', icon: 'fa-solid fa-feather', color: '#10b981' },
-        { name: '宇创领航工作室', url: 'https://vhwork.cn/', desc: 'MC中国版综合开发工作室', icon: 'fa-solid fa-rocket', color: '#94a3b8' },
-        { name: 'MewBaka笨猫工作室', url: 'https://www.mewbaka.cn/', desc: '视觉小说游戏引擎开发', icon: 'fa-solid fa-cat', color: '#f97316' },
-        { name: '雨夜街水泥钟表', url: '#', desc: '文字设计与文字冒险游戏', icon: 'fa-solid fa-clock', color: '#5b9bd5' }
-    ];
+        { name: '雨夜街水泥钟表', url: '#', desc: '文字设计与文字冒险游戏', icon: 'fa-solid fa-clock', color: '#5b9bd5' }    ];
 
     function getNavbar(activePage) {
         var isSubPage = activePage === 'partners';
@@ -170,49 +165,38 @@
             return '<a href="' + p.url + '" class="social-link" style="border-color:' + p.color + '40;color:' + p.color + '" title="' + p.name + '" target="_blank" rel="noopener"><i class="' + p.icon + '"></i></a>';
         }).join('');
 
-        var serviceLinks = SERVICES.map(function (s) {
-            return '<li><a href="' + (s.url || '#services') + '"' + (s.url ? ' target="_blank" rel="noopener"' : '') + '>' + s.name + '</a></li>';
-        }).join('');
-
         var friendLinksHtml = FRIEND_LINKS.map(function (f) {
-            return '<a href="' + f.url + '" class="friend-link-item" target="_blank" rel="noopener" title="' + f.desc + '">' +
-                '<span class="friend-link-icon" style="--fl-bg:' + f.color + '1a;--fl-color:' + f.color + '"><i class="' + f.icon + '"></i></span>' +
-                '<span class="friend-link-text"><strong>' + f.name + '</strong><span>' + f.desc + '</span></span>' +
-                '</a>';
+            return '<a href="' + f.url + '" class="friend-link-item" target="_blank" rel="noopener">' + f.name + '</a>';
         }).join('');
 
         return '' +
             '<footer class="footer">' +
-            '  <div class="footer-bg"><div class="footer-grid"></div></div>' +
             '  <div class="container">' +
             '    <div class="footer-main">' +
             '      <div class="footer-brand">' +
-    '        <div class="footer-logo"><img src="images/sfllogo.webp" alt="' + SITE.name + ' Logo" class="logo-img"></div>' +
-    '        <h3>' + SITE.name + ' <span>' + SITE.en + '</span></h3>' +
-            '        <p class="footer-desc">' + SITE.desc + '<br>皮肤 · 建筑 · Addon · 资源定制</p>' +
+            '        <div class="footer-logo"><img src="images/sfllogo.webp" alt="' + SITE.name + ' Logo" class="logo-img"></div>' +
+            '        <h3>' + SITE.name + '</h3>' +
+            '        <p class="footer-en">' + SITE.en + '</p>' +
+            '        <p class="footer-desc">' + SITE.desc + '<br>皮肤、建筑、Addon 与资源定制</p>' +
             '        <div class="footer-socials">' + platformLinks + '</div>' +
             '      </div>' +
             '      <div class="footer-nav"><h4>快速导航</h4><ul>' +
-            '<li><a href="#hero">主页</a></li>' +
-            '<li><a href="#about">简介</a></li>' +
             '<li><a href="#works">代表作品</a></li>' +
             '<li><a href="#services">业务服务</a></li>' +
             '<li><a href="#shop">在售资源</a></li>' +
             '<li><a href="#members">成员列表</a></li>' +
-            '<li><a href="#feedback">反馈入口</a></li>' +
-            '<li><a href="#join">加入我们</a></li>' +
+            '<li><a href="#join">加入与反馈</a></li>' +
             '<li><a href="partners.html">合作伙伴</a></li>' +
             '<li><a href="https://data.swiftfishlab.cn" target="_blank" rel="noopener">上架数据</a></li>' +
             '</ul></div>' +
-            '      <div class="footer-services"><h4>业务范围</h4><ul>' + serviceLinks + '</ul></div>' +
             '      <div class="footer-contact"><h4>联系方式</h4>' +
             '        <div class="contact-item"><i class="fa-solid fa-users"></i><div><span>交流群</span><a href="' + SITE.qq.chatUrl + '" target="_blank" rel="noopener">' + SITE.qq.chat + '</a></div></div>' +
-            '        <div class="contact-item"><i class="fa-solid fa-user-plus"></i><div><span>负责人QQ</span><a href="' + SITE.qq.join1Url + '" target="_blank" rel="noopener">' + SITE.qq.join1 + '</a></div></div>' +
-            '        <div class="contact-item"><i class="fa-solid fa-user-plus"></i><div><span>负责人QQ</span><a href="#" onclick="copyText(\'' + SITE.qq.join2 + '\');return false;">' + SITE.qq.join2 + '</a></div></div>' +
+            '        <div class="contact-item"><i class="fa-solid fa-user-plus"></i><div><span>负责人 QQ 1</span><a href="' + SITE.qq.join1Url + '" target="_blank" rel="noopener">' + SITE.qq.join1 + '</a></div></div>' +
+            '        <div class="contact-item"><i class="fa-solid fa-user-plus"></i><div><span>负责人 QQ 2</span><a href="#" onclick="copyText(\'' + SITE.qq.join2 + '\');return false;">' + SITE.qq.join2 + '</a></div></div>' +
             '      </div>' +
             '      <div class="footer-friendlinks"><h4>友情链接</h4><div class="friend-links">' + friendLinksHtml + '</div></div>' +
             '    </div>' +
-            '    <div class="footer-bottom"><p>© 2021-2026 ' + SITE.name + ' ' + SITE.en + '. All Rights Reserved.</p><p>本网站与 Mojang AB 及网易公司无关 · ' + SITE.desc + '</p><p><a href="https://icp.gov.moe/?keyword=20262708" target="_blank" rel="noopener">萌ICP备20262708号</a></p></div>' +
+            '    <div class="footer-bottom"><p>© 2021–2026 ' + SITE.name + ' ' + SITE.en + '. All Rights Reserved.</p><p>本网站与 Mojang AB 及网易公司无关。' + SITE.desc + '</p><p><a href="https://icp.gov.moe/?keyword=20262708" target="_blank" rel="noopener">萌ICP备20262708号</a></p></div>' +
             '  </div>' +
             '</footer>' +
             '<button class="back-to-top" id="backToTop" aria-label="返回顶部"><i class="fa-solid fa-arrow-up"></i></button>' +

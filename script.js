@@ -102,6 +102,9 @@
             if (!currentId && window.scrollY < 200) {
                 currentId = sections[0] ? sections[0].id : '';
             }
+            /* 简介与数据条算作主页；数据看板归到代表作品 */
+            if (currentId === 'about' || currentId === 'stats') currentId = 'hero';
+            if (currentId === 'data-platform') currentId = 'works';
             navLinks.forEach(function (link) {
                 link.classList.remove('active');
                 if (link.getAttribute('data-nav') === currentId) {
