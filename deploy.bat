@@ -20,22 +20,30 @@ if defined HAS_PROXY (
 )
 echo.
 
-echo [1/5] Syncing files to public\ ...
+echo [1/6] Syncing files to public\ ...
 copy /Y index.html public\  >nul
 copy /Y partners.html public\  >nul
+copy /Y skin.html public\  >nul
+copy /Y architecture.html public\  >nul
+copy /Y addon.html public\  >nul
+copy /Y maps.html public\  >nul
+copy /Y pixel-art.html public\  >nul
+copy /Y vocaloid.html public\  >nul
+copy /Y archive-convert.html public\  >nul
 copy /Y common.min.js public\  >nul
 copy /Y script.min.js public\  >nul
 copy /Y style.min.css public\  >nul
 copy /Y robots.txt public\  >nul
 copy /Y sitemap.xml public\  >nul
 copy /Y 50b613ee05dd49d9b3168757218fdb28.txt public\  >nul
+copy /Y 0b6d51337a284dbf922bec0c33a7f238.txt public\  >nul
 copy /Y og-logo.png public\  >nul
 robocopy images public\images /E /NFL /NDL /NJH >nul
 robocopy css public\css /E /NFL /NDL /NJH >nul
 robocopy webfonts public\webfonts /E /NFL /NDL /NJH >nul
 echo Sync done.
 
-echo [2/5] Environment check...
+echo [2/6] Environment check...
 where vercel >nul 2>&1
 if errorlevel 1 (
   echo [ERROR] vercel command not found. Run once: npm i -g vercel
@@ -43,7 +51,7 @@ if errorlevel 1 (
   exit /b 1
 )
 
-echo [3/5] Deploying to Vercel production (project root = public\)...
+echo [3/6] Deploying to Vercel production (project root = public\)...
 pushd public
 call vercel --prod --yes --archive=tgz
 set "RESULT=%ERRORLEVEL%"
@@ -51,7 +59,7 @@ popd
 
 echo.
 if "%RESULT%"=="0" (
-  echo [4/5] Git backup: commit and push to GitHub...
+  echo [4/6] Git backup: commit and push to GitHub...
   git add -A >nul 2>&1
   git commit -m "chore(deploy): auto backup after Vercel publish" >nul 2>&1
   if errorlevel 1 (
@@ -68,8 +76,11 @@ if "%RESULT%"=="0" (
     echo       Pushed to GitHub as backup.
   )
   echo.
-  echo [5/5] 百度主动推送...
+  echo [5/6] 百度主动推送...
   powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0push-baidu.ps1"
+  echo.
+  echo [6/6] IndexNow 推送 (Bing/Yandex)...
+  powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0indexnow.ps1"
   echo.
   echo Deploy finished successfully.
   echo https://www.swiftfishlab.cn

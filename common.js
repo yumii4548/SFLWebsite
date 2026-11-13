@@ -30,8 +30,7 @@
             { id: 'reserved-building-1', title: '长安唐大明宫', subtitle: 'Daming Palace', category: '古建筑组 · 尚国营建', desc: '完整还原长安唐代大明宫，大明宫，大唐帝国的大朝正宫，唐朝的政治中心和国家象征，位于唐京师长安（今西安）北侧的龙首原，是唐长安城三座主要宫殿“三大内”（大明宫、太极宫、兴庆宫）中规模最大的一座。', tags: ['#尚国营建', '#宫殿', '#唐宋'], icon: 'fa-hammer', image: 'images/daminggong.webp', author: '浔昇' },
             { id: 'reserved-building-2', title: '兰茶市6 · 古韵银江', subtitle: 'LACH City 6', category: '现代城市 · SHV团队', desc: '兰茶市是基于架空城市的基础上创作的一个拥有烟火气的小城，拥有丰富的地铁的线路、场景与彩蛋，近年来逐步更新，得到了很多MC中国版玩家的喜爱。', tags: ['#现代都市', '#架空', '#SHV团队'], icon: 'fa-city', image: 'images/lach.webp', author: 'SHV寻林' },
             { id: 'reserved-building-3', title: '明清风格明堂', subtitle: 'Ming and Qing style Mingtang', category: '古建筑组 · 明清建筑', desc: '原型参考武则天时期洛阳城核心建筑万象神宫（明堂），保留”上圆下方、三重通天”的核心形制，经体量缩放与明清风格化重构，用方块还原了一座兼具唐代格局与明清细节的中式建筑大观。', tags: ['#古建筑', '#明清', '#明堂'], icon: 'fa-hammer', image: 'images/mingtang.webp', isReserved: false, author: '亨升' },
-            { id: 'reserved-building-4', title: '希伦市', subtitle: 'Hilom City', category: '现代城市 · 云筑设计团队', desc: '希伦市是一座历经四代迭新、以现代都市为蓝本打造的架空城市，融合商业中心、交通枢纽与滨水景观，细节丰富布局考究，是云筑设计团队的又一力作。', tags: ['#现代都市', '#架空', '#云筑设计'], icon: 'fa-city', image: 'images/xls.webp', author: 'HOYSH' },
-            { id: 'tiananmenguangchang', title: '北京天安门广场', subtitle: 'Tiananmen Square', category: '古建筑组 · 红色建筑', desc: '以方块按比例还原北京天安门广场，涵盖天安门城楼、人民英雄纪念碑、人民大会堂与国家博物馆等标志性建筑。广场中轴对称、气势磅礴，城楼红墙金瓦，是新中国形象的经典地标，也是明清古建与宏大城市规划相结合的匠心之作。', tags: ['#地标', '#广场', '#明清'], icon: 'fa-monument', image: 'images/tam.webp', author: '亨升' }
+            { id: 'reserved-building-4', title: '希伦市', subtitle: 'Hilom City', category: '现代城市 · 云筑设计团队', desc: '希伦市是一座历经四代迭新、以现代都市为蓝本打造的架空城市，融合商业中心、交通枢纽与滨水景观，细节丰富布局考究，是云筑设计团队的又一力作。', tags: ['#现代都市', '#架空', '#云筑设计'], icon: 'fa-city', image: 'images/xls.webp', author: 'HOYSH' }
         ],
         maps: [
             { id: 'reserved-map-1', title: '杀戮迷宫', subtitle: 'Killing Labyrinth', category: '玩法地图 · 多人竞技', desc: '石砖构筑的巨大迷宫纵横交错，曲折通道暗藏杀机。踏入这片迷域，前路难辨方向，敌人潜伏拐角，唯有奋力厮杀，寻得出路方能存活。', tags: ['#多人对战', '#单人竞技', '#联机玩法'], icon: 'fa-map', image: 'images/slmg.webp', author: '挽留' },
@@ -166,7 +165,7 @@
         }).join('');
 
         var friendLinksHtml = FRIEND_LINKS.map(function (f) {
-            return '<a href="' + f.url + '" class="friend-link-item" target="_blank" rel="noopener">' + f.name + '</a>';
+            return '<a href="' + f.url + '" class="friend-link-item" target="_blank" rel="noopener"><i class="' + f.icon + '" style="color:' + f.color + '"></i>' + f.name + '</a>';
         }).join('');
 
         return '' +
@@ -216,3 +215,18 @@
     global.SITE_DATA = { SITE: SITE, SERVICES: SERVICES, WORKS: WORKS, PLATFORMS: PLATFORMS, MEMBERS: MEMBERS, SHOP_ITEMS: SHOP_ITEMS, PARTNERS: PARTNERS, FRIEND_LINKS: FRIEND_LINKS };
     global.injectLayout = injectLayout;
 })(window);
+
+// ===== 服务页脚链接 + JSON-LD 结构化数据（全站生效，含主页；幂等） =====
+try {
+    if (!document.querySelector('.footer-services')) {
+        var _fb = document.querySelector('footer.footer .footer-bottom');
+        if (_fb) {
+            _fb.insertAdjacentHTML('beforebegin',
+                '<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.swiftfishlab.cn/#org","name":"极鱼社","alternateName":"SwiftFishLab","url":"https://www.swiftfishlab.cn/","logo":"https://www.swiftfishlab.cn/images/sfllogo.webp","description":"Minecraft 综合型开发团队"},{"@type":"WebSite","@id":"https://www.swiftfishlab.cn/#website","url":"https://www.swiftfishlab.cn/","name":"极鱼社 SwiftFishLab","inLanguage":"zh-CN","publisher":{"@id":"https://www.swiftfishlab.cn/#org"}}]}</script>' +
+                '<div class="footer-services"><span class="footer-services-label">服务页面</span>' +
+                '<a href="/skin">皮肤定制</a><a href="/architecture">建筑承包</a><a href="/addon">Addon 组件</a>' +
+                '<a href="/maps">玩法地图</a><a href="/pixel-art">拼豆图纸</a><a href="/vocaloid">音乐企划</a>' +
+                '<a href="/archive-convert">存档互通</a><a href="/partners">合作伙伴</a></div>');
+        }
+    }
+} catch (e) { console.warn('服务页脚注入失败:', e); }

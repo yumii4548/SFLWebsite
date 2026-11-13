@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no, email=no, address=no">
+    <meta name="theme-color" content="#0f172a">
+    <title>MC Addon组件开发_基岩版模组定制 - 极鱼社 SwiftFishLab</title>
+    <link rel="canonical" href="https://www.swiftfishlab.cn/addon">
+    <meta name="description" content="极鱼社提供MC Addon组件开发，作品涵盖载具、家具、生物随宠、音乐组件等品类，部分免费组件下载量超过100万，长期上架MC中国版。">
+    <meta name="keywords" content="MC Addon,基岩版模组,组件开发,我的世界模组,载具Addon,家具Addon,极鱼社">
+    <meta name="author" content="极鱼社 SwiftFishLab">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" href="images/sfllogo.webp">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="MC Addon组件开发_基岩版模组定制 - 极鱼社 SwiftFishLab">
+    <meta property="og:description" content="作品涵盖载具、家具、生物随宠、音乐组件等品类，部分免费组件下载量超过100万，长期上架MC中国版。">
+    <meta property="og:url" content="https://www.swiftfishlab.cn/addon">
+    <meta property="og:image" content="https://www.swiftfishlab.cn/og-logo.png">
+    <meta property="og:site_name" content="极鱼社 SwiftFishLab">
+    <meta property="og:locale" content="zh_CN">
+    <link rel="preload" as="style" href="style.min.css?v=20261103o">
+    <link rel="preload" as="image" href="images/sfllogo.webp">
+    <link rel="stylesheet" href="style.min.css?v=20261103o">
+    <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="index.html#hero" class="nav-logo">
+          <img src="images/sfllogo.webp" alt="极鱼社 SwiftFishLab" class="logo-img">
+        </a>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html#hero" class="nav-link" data-nav="hero">主页</a></li>
+          <li><a href="index.html#works" class="nav-link" data-nav="works">代表作品</a></li>
+          <li><a href="index.html#services" class="nav-link" data-nav="services">业务服务</a></li>
+          <li><a href="index.html#shop" class="nav-link" data-nav="shop">在售资源</a></li>
+          <li><a href="index.html#members" class="nav-link" data-nav="members">成员列表</a></li>
+          <li><a href="index.html#join" class="nav-link" data-nav="join">加入我们</a></li>
+          <li><a href="/partners" class="nav-link" data-nav="partners">合作伙伴</a></li>
+          <li><a href="https://data.swiftfishlab.cn" class="nav-link" target="_blank" rel="noopener" data-nav="data">上架数据</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="菜单" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div class="nav-overlay" id="navOverlay"></div>
+    </nav>
+    <main>
+        <section class="partners-hero" id="pageHero">
+            <div class="partners-hero-content">
+                <h1 class="reveal">Addon 组件开发</h1>
+                <p class="reveal" style="--delay:0.1s">Addon 是 Minecraft 基岩版与中国版的组件形式。极鱼社的 Addon 开发由团队负责人元谋YUMI 主导——他是 MC 中国版多款热门模组的开发者，部分免费模组下载量超过 100w。</p>
+            </div>
+        </section>
+
+        <section class="section" id="works">
+            <div class="container">
+                <div class="section-head reveal">
+                    <h2 class="section-title">代表组件作品</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-subtitle">载具 · 家具 · 生物随宠 · 音乐 · 装饰 ｜ 以上为代表作品，更多可关注社交媒体平台或在游戏内下载</p>
+                </div>
+                <div class="shop-grid">
+                    <div class="shop-item reveal"><div class="shop-visual"><img src="images/binfentangzixingche.webp" alt="缤纷糖自行车 - 载具 Addon" class="shop-img" loading="lazy" decoding="async"></div><div class="shop-info"><span class="shop-cat">Addon · 载具</span><h3>缤纷糖自行车</h3><p>糖果主题自行车载具，缤纷色彩搭配多种皮肤，拥有完整的骑行动画和机制，让你的MC世界充满甜蜜与活力。</p><p>作者：元谋YUMI</p></div></div>
+                    <div class="shop-item reveal"><div class="shop-visual"><img src="images/fugukehuanzaijubao.webp" alt="复古科幻载具包 - 载具包 Addon" class="shop-img" loading="lazy" decoding="async"></div><div class="shop-info"><span class="shop-cat">Addon · 载具包</span><h3>复古科幻载具包</h3><p>资源包包含3辆核动力驱动的科幻载具，造型设计起源于50年代，代表人们对未来的向往和幻想。部分车辆有背景音乐，车子有两百点血量。</p><p>作者：Kino</p></div></div>
+                    <div class="shop-item reveal"><div class="shop-visual"><img src="images/zsjj.webp" alt="中式家具 · 正式版 - 家具 Addon" class="shop-img" loading="lazy" decoding="async"></div><div class="shop-info"><span class="shop-cat">Addon · 家具</span><h3>中式家具 · 正式版</h3><p>模组新增十余款精致中式古风家具，包含桌椅、屏风、灯笼、花窗等摆件，打造古韵内饰，轻松搭建国风宅院。</p><p>作者：浔昇</p></div></div>
+                    <div class="shop-item reveal"><div class="shop-visual"><img src="images/pd.webp" alt="【像素拼豆】Mard全系291色建筑方块拓展包" class="shop-img" loading="lazy" decoding="async"></div><div class="shop-info"><span class="shop-cat">Addon · 建筑拓展</span><h3>【像素拼豆】Mard全系291色建筑方块拓展包</h3><p>以 Mard 拼豆全套 291 色标准色谱为灵感 1:1 复刻，新增 15 大类色号合计 291 款纯色方块，彻底填补原版色彩空白；支持聊天栏输入色号一键获取、批量多重取件，内附说明书与图纸，适配像素画、彩绘、造景等全部建造场景。</p><p>作者：元谋YUMI</p></div></div>
+                    <div class="shop-item reveal"><div class="shop-visual"><img src="images/tdsw.webp" alt="头顶生物 - 生物随宠 Addon" class="shop-img" loading="lazy" decoding="async"></div><div class="shop-info"><span class="shop-cat">Addon · 生物随宠</span><h3>头顶生物</h3><p>以「原版生物头顶随宠」为创作灵感，新增四十余种涵盖动物、敌对生物、水生生物的头顶随宠，均拥有独立动画与专属机制：装配水系生物可获水下呼吸，装配敌对生物可提升血量上限或附加空手火焰，还可解锁层层叠叠的「套娃玩法」。所有随宠均支持生存合成，填补原版生存的陪伴空白。</p><p>作者：元谋YUMI</p></div></div>
+                    <div class="shop-item reveal"><div class="shop-visual"><img src="images/huadeng.webp" alt="元宵花灯 - 装饰 Addon" class="shop-img" loading="lazy" decoding="async"></div><div class="shop-info"><span class="shop-cat">Addon · 装饰</span><h3>元宵花灯</h3><p>新增数十款款国风元宵花灯！梅兰竹菊、牡丹纹样一应俱全。精致立体模型，流苏飘逸，装点古风庭院、古镇街巷，灯火盈盈，为你的世界增添浓浓中式佳节氛围。</p><p>作者：浔昇</p></div></div>
+                    <div class="shop-item reveal"><div class="shop-visual"><img src="images/ld.webp" alt="唱片型音乐播放器- 路灯原创音乐包" class="shop-img" loading="lazy" decoding="async"></div><div class="shop-info"><span class="shop-cat">Addon · 唱片音乐包</span><h3>唱片型音乐播放器- 路灯原创音乐包</h3><p>SFL与R.A.D Music Club联手推出的唱片音乐模组，新增8首原创曲目，30格内可立体听音，音频均拥有完整版权，生存模式即可制作播放器，拥有独立歌词本可对照。</p><p>作者：A_路灯、元谋YUMI</p></div></div>
+                    <div class="shop-item reveal"><div class="shop-visual"><img src="images/yuanbanshengwuqicheng.webp" alt="更好的原版生物可骑乘 - 生物增强 Addon" class="shop-img" loading="lazy" decoding="async"></div><div class="shop-info"><span class="shop-cat">Addon · 生物增强</span><h3>更好的原版生物可骑乘</h3><p>原版全部生物新增驯化骑乘属性，骑乘任意你喜欢的生物遨游世界，甚至在夜幕降临时骑乘幻翼遨游天空，部分生物还有物品栏属性哦！</p><p>作者：元谋YUMI</p></div></div>
+                    <div class="shop-item reveal"><div class="shop-visual"><img src="images/paopaochuan.webp" alt="泡泡船 - 载具 Addon" class="shop-img" loading="lazy" decoding="async"></div><div class="shop-info"><span class="shop-cat">Addon · 载具</span><h3>泡泡船</h3><p>以动漫海绵宝宝为创意打造的可爱海洋主题小船，可在水面自由航行，产生泡泡粒子效果，冒险必备萌系载具。</p><p>作者：元谋YUMI</p></div></div>
+                    <div class="shop-item reveal"><div class="shop-visual"><img src="images/dhcc.webp" alt="灯火璀璨 - 元宵 装饰 Addon" class="shop-img" loading="lazy" decoding="async"></div><div class="shop-info"><span class="shop-cat">Addon · 装饰</span><h3>灯火璀璨 - 元宵</h3><p>极鱼社2025元宵主题组件！多款复古传统花灯各具特色，匠心还原中式古灯造型。悬于长街楼阁，星火点点，在方块世界重现上元灯会的繁华盛景。</p><p>作者：浔昇、元谋YUMI</p></div></div>
+                    <div class="shop-item reveal"><div class="shop-visual"><img src="images/kjj.webp" alt="更多精细人模盔甲架 - 角色 Addon" class="shop-img" loading="lazy" decoding="async"></div><div class="shop-info"><span class="shop-cat">Addon · 角色</span><h3>更多精细人模盔甲架</h3><p>升级优化盔甲架模型，拥有生动人形外观。自由摆放姿态，陈列武器、套装，用于展厅布景、商铺装饰，打造精致方块场景。</p><p>作者：SFL皮肤组、元谋YUMI</p></div></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="get">
+            <div class="container">
+                <div class="section-head reveal">
+                    <h2 class="section-title">获取与咨询</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-subtitle">部分组件上架 MC 中国版资源大厅，也可通过爱发电选购</p>
+                </div>
+                <div class="reveal" style="text-align:center;margin-top:16px">
+                    <a class="btn btn-primary" href="https://mc.163.com/pe/startup/?id=netease&amp;param=%7B%22from%22%3A%20%22profileTeam%22%2C%20%22id%22%3A%20%221627555615%22%7D" target="_blank" rel="noopener">MC中国版资源大厅</a>
+                    <a class="btn btn-ghost" href="https://ifdian.net/a/xunsheng208322" target="_blank" rel="noopener">爱发电选购</a>
+                    <a class="btn btn-ghost" href="https://qm.qq.com/q/22asfFbLhC" target="_blank" rel="noopener">QQ 群咨询（914029611）</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="faq">
+            <div class="container">
+                <div class="section-head reveal">
+                    <h2 class="section-title">常见问题</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-subtitle">下单前你可能想问</p>
+                </div>
+                <div class="reveal">
+                    <h3>Addon 支持中国版吗？</h3>
+                    <p>作品均面向 MC 中国版与基岩版开发。</p>
+                    <h3>如何购买组件？</h3>
+                    <p>部分组件上架 MC 中国版资源大厅，也可通过爱发电选购，定制开发可在 QQ 群咨询。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="related">
+            <div class="container">
+                <div class="section-head reveal">
+                    <h2 class="section-title">相关服务</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-subtitle">极鱼社对外开展的核心业务</p>
+                </div>
+                <div class="reveal" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center">
+                    <a class="btn btn-ghost" href="/skin">皮肤定制与代投</a>
+                    <a class="btn btn-ghost" href="/architecture">建筑承包</a>
+                    <a class="btn btn-ghost" href="/addon">Addon 组件</a>
+                    <a class="btn btn-ghost" href="/maps">玩法地图</a>
+                    <a class="btn btn-ghost" href="/pixel-art">拼豆图纸</a>
+                    <a class="btn btn-ghost" href="/vocaloid">音乐企划</a>
+                    <a class="btn btn-ghost" href="/archive-convert">存档互通</a>
+                    <a class="btn btn-ghost" href="/partners">合作伙伴</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="images/responsive.js?v=20261029a"></script>
+    <script src="common.min.js?v=20261114a"></script>
+    <script>
+        try { injectLayout('partners'); } catch(e) { console.warn('布局注入失败:', e); }
+    </script>
+    <script src="script.min.js?v=20261103o"></script>
+</body>
+</html>
