@@ -59,11 +59,11 @@ if "%RESULT%"=="0" (
   ) else (
     echo       Committed locally.
   )
-  git push origin HEAD >nul 2>&1
+  git -c http.proxy= -c https.proxy= push origin HEAD >nul 2>&1
   if errorlevel 1 (
-    echo       [WARN] Push failed - GitHub unreachable or proxy off.
+    echo       [WARN] Push failed - GitHub unreachable.
     echo       The live site is already updated. Retry later from this folder:
-    echo         git push origin HEAD
+    echo         git -c http.proxy= -c https.proxy= push origin HEAD
   ) else (
     echo       Pushed to GitHub as backup.
   )
