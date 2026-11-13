@@ -117,7 +117,7 @@
         { name: '雨夜街水泥钟表', en: 'Rain Water', type: '合作组织', desc: '雨夜街水泥钟表（雨夜街）成立于2025年6月8日，以文字设计为核心业务，理念是“梦想优先，创作自由”。目前雨夜街的主要方向是ACG文字冒险类游戏。', url: '#', color: '#5b9bd5', logo: 'fa-solid fa-clock', image: 'images/yyj.webp' }    ];
 
     var FRIEND_LINKS = [
-        { name: '上海熵联天创', url: 'https://tianentropy.cn/', desc: '独立游戏开发团队', icon: 'fa-solid fa-gamepad', color: '#f59e0b' },
+        { name: '上海熵联天创', url: 'https://tianentropy.cn/', desc: '独立游戏开发团队', icon: 'fa-solid fa-chess-rook', color: '#f59e0b' },
         { name: 'MewBaka笨猫工作室', url: 'https://www.mewbaka.cn/', desc: '视觉小说游戏引擎开发', icon: 'fa-solid fa-cat', color: '#f97316' },
         { name: '宙鱼文化工作室', url: 'https://cbuad.net/', desc: '新媒体运营与文创宣发', icon: 'fa-solid fa-city', color: '#0ea5e9' },
         { name: 'R.A.D Music Club', url: 'https://space.bilibili.com/105791477', desc: '全球视野音乐团队', icon: 'fa-solid fa-music', color: '#ec4899' },
@@ -216,17 +216,25 @@
     global.injectLayout = injectLayout;
 })(window);
 
-// ===== 服务页脚链接 + JSON-LD 结构化数据（全站生效，含主页；幂等） =====
-try {
-    if (!document.querySelector('.footer-services')) {
-        var _fb = document.querySelector('footer.footer .footer-bottom');
-        if (_fb) {
-            _fb.insertAdjacentHTML('beforebegin',
-                '<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.swiftfishlab.cn/#org","name":"极鱼社","alternateName":"SwiftFishLab","url":"https://www.swiftfishlab.cn/","logo":"https://www.swiftfishlab.cn/images/sfllogo.webp","description":"Minecraft 综合型开发团队"},{"@type":"WebSite","@id":"https://www.swiftfishlab.cn/#website","url":"https://www.swiftfishlab.cn/","name":"极鱼社 SwiftFishLab","inLanguage":"zh-CN","publisher":{"@id":"https://www.swiftfishlab.cn/#org"}}]}</script>' +
+// ===== 服务页脚链接 + JSON-LD（等页脚注入完成后再挂载；主页与子页通用，幂等） =====
+(function () {
+    var tries = 0;
+    function injectServices() {
+        if (document.querySelector('.footer-services')) { return; }
+        var fb = document.querySelector('footer.footer .footer-bottom');
+        if (!fb) {
+            if (++tries < 60) { setTimeout(injectServices, 100); }
+            return;
+        }
+        try {
+            var ld = document.querySelector('script[type="application/ld+json"]') ? '' :
+                '<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.swiftfishlab.cn/#org","name":"极鱼社","alternateName":"SwiftFishLab","url":"https://www.swiftfishlab.cn/","logo":"https://www.swiftfishlab.cn/images/sfllogo.webp","description":"Minecraft 综合型开发团队"},{"@type":"WebSite","@id":"https://www.swiftfishlab.cn/#website","url":"https://www.swiftfishlab.cn/","name":"极鱼社 SwiftFishLab","inLanguage":"zh-CN","publisher":{"@id":"https://www.swiftfishlab.cn/#org"}}]}</script>';
+            fb.insertAdjacentHTML('beforebegin', ld +
                 '<div class="footer-services"><span class="footer-services-label">服务页面</span>' +
                 '<a href="/skin">皮肤定制</a><a href="/architecture">建筑承包</a><a href="/addon">Addon 组件</a>' +
                 '<a href="/maps">玩法地图</a><a href="/pixel-art">拼豆图纸</a><a href="/vocaloid">音乐企划</a>' +
                 '<a href="/archive-convert">存档互通</a><a href="/partners">合作伙伴</a></div>');
-        }
+        } catch (e) { console.warn('服务页脚注入失败:', e); }
     }
-} catch (e) { console.warn('服务页脚注入失败:', e); }
+    injectServices();
+})();
