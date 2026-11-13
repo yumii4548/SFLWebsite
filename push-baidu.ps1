@@ -72,10 +72,21 @@ try {
     exit 0
 }
 
+# 保存原始响应，便于事后核对百度反馈（本文件已被 .gitignore 忽略）
+try {
+    $rawLog = Join-Path $root '.baidu-lastresponse.json'
+    $resp | ConvertTo-Json -Depth 5 | Out-File -FilePath $rawLog -Encoding UTF8
+} catch { }
+
 if ($null -ne $resp.success) {
     Write-Host ("  [OK] 百度推送成功: 提交 {0} 条，今日剩余配额 {1}" -f $resp.success, $resp.remain) -ForegroundColor Green
-    if ($null -ne $resp.not_same) {
-        Write-Host ("       其中 {0} 条为已收录过的 URL" -f $resp.not_same) -ForegroundColor DarkGray
+    if ($resp.not_same_site -and $resp.not_same_site.Count -gt 0) {
+        Write-Host ("       [注意] {0} 条因不属于本站被忽略:" -f $resp.not_same_site.Count) -ForegroundColor Yellow
+        $resp.not_same_site | ForEach-Object { Write-Host "         $_" -ForegroundColor Yellow }
+    }
+    if ($resp.not_valid -and $resp.not_valid.Count -gt 0) {
+        Write-Host ("       [注意] {0} 条 URL 不合法被拒绝:" -f $resp.not_valid.Count) -ForegroundColor Yellow
+        $resp.not_valid | ForEach-Object { Write-Host "         $_" -ForegroundColor Yellow }
     }
     [System.IO.File]::WriteAllText($stateFile, $fingerprint, (New-Object System.Text.UTF8Encoding($false)))
     Write-Host "  [OK] 已记录本次内容指纹，下次内容不变时将自动跳过。" -ForegroundColor DarkGray
