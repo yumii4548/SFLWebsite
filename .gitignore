@@ -31,3 +31,6 @@ ws-redesign/
 
 # 百度推送 token（勿提交）
 .baidu-token
+
+# 百度推送状态（本地记录，勿提交）
+.baidu-lastpush
