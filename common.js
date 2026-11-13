@@ -196,7 +196,7 @@
             '      </div>' +
             '      <div class="footer-friendlinks"><h4>友情链接</h4><div class="friend-links">' + friendLinksHtml + '</div></div>' +
             '    </div>' +
-            '    <div class="footer-bottom"><p>© 2021–2026 ' + SITE.name + ' ' + SITE.en + '. All Rights Reserved.</p><p>本网站与 Mojang AB 及网易公司无关。' + SITE.desc + '</p><p><a href="https://icp.gov.moe/?keyword=20262708" target="_blank" rel="noopener">萌ICP备20262708号</a></p></div>' +
+            '    <div class="footer-bottom"><p>© 2021–2026 ' + SITE.name + ' ' + SITE.en + '. All Rights Reserved.</p><p>本网站与 Mojang AB 及网易公司无关。' + SITE.desc + '</p></div>' +
             '  </div>' +
             '</footer>' +
             '<button class="back-to-top" id="backToTop" aria-label="返回顶部"><i class="fa-solid fa-arrow-up"></i></button>' +
@@ -204,9 +204,13 @@
     }
 
     function injectLayout(activePage) {
-        document.body.insertAdjacentHTML('afterbegin', getNavbar(activePage));
-
-        document.body.insertAdjacentHTML('beforeend', getFooter());
+        // 静态 HTML 中已内置导航/页脚时不再重复注入，避免内容重复
+        if (!document.getElementById('navbar')) {
+            document.body.insertAdjacentHTML('afterbegin', getNavbar(activePage));
+        }
+        if (!document.querySelector('footer.footer')) {
+            document.body.insertAdjacentHTML('beforeend', getFooter());
+        }
     }
 
     global.SITE_DATA = { SITE: SITE, SERVICES: SERVICES, WORKS: WORKS, PLATFORMS: PLATFORMS, MEMBERS: MEMBERS, SHOP_ITEMS: SHOP_ITEMS, PARTNERS: PARTNERS, FRIEND_LINKS: FRIEND_LINKS };

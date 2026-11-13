@@ -20,7 +20,7 @@ if defined HAS_PROXY (
 )
 echo.
 
-echo [1/4] Syncing files to public\ ...
+echo [1/5] Syncing files to public\ ...
 copy /Y index.html public\  >nul
 copy /Y partners.html public\  >nul
 copy /Y common.min.js public\  >nul
@@ -35,7 +35,7 @@ robocopy css public\css /E /NFL /NDL /NJH >nul
 robocopy webfonts public\webfonts /E /NFL /NDL /NJH >nul
 echo Sync done.
 
-echo [2/4] Environment check...
+echo [2/5] Environment check...
 where vercel >nul 2>&1
 if errorlevel 1 (
   echo [ERROR] vercel command not found. Run once: npm i -g vercel
@@ -43,7 +43,7 @@ if errorlevel 1 (
   exit /b 1
 )
 
-echo [3/4] Deploying to Vercel production (project root = public\)...
+echo [3/5] Deploying to Vercel production (project root = public\)...
 pushd public
 call vercel --prod --yes --archive=tgz
 set "RESULT=%ERRORLEVEL%"
@@ -51,7 +51,7 @@ popd
 
 echo.
 if "%RESULT%"=="0" (
-  echo [4/4] Git backup: commit and push to GitHub...
+  echo [4/5] Git backup: commit and push to GitHub...
   git add -A >nul 2>&1
   git commit -m "chore(deploy): auto backup after Vercel publish" >nul 2>&1
   if errorlevel 1 (
@@ -67,6 +67,9 @@ if "%RESULT%"=="0" (
   ) else (
     echo       Pushed to GitHub as backup.
   )
+  echo.
+  echo [5/5] 百度主动推送...
+  powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0push-baidu.ps1"
   echo.
   echo Deploy finished successfully.
   echo https://www.swiftfishlab.cn

@@ -21,6 +21,27 @@
     <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 </head>
 <body>
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="index.html#hero" class="nav-logo">
+          <img src="images/sfllogo.webp" alt="极鱼社 SwiftFishLab" class="logo-img">
+        </a>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html#hero" class="nav-link" data-nav="hero">主页</a></li>
+          <li><a href="index.html#works" class="nav-link" data-nav="works">代表作品</a></li>
+          <li><a href="index.html#services" class="nav-link" data-nav="services">业务服务</a></li>
+          <li><a href="index.html#shop" class="nav-link" data-nav="shop">在售资源</a></li>
+          <li><a href="index.html#members" class="nav-link" data-nav="members">成员列表</a></li>
+          <li><a href="index.html#join" class="nav-link" data-nav="join">加入我们</a></li>
+          <li><a href="/partners" class="nav-link active" data-nav="partners">合作伙伴</a></li>
+          <li><a href="https://data.swiftfishlab.cn" class="nav-link" target="_blank" rel="noopener" data-nav="data">上架数据</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="菜单" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div class="nav-overlay" id="navOverlay"></div>
+    </nav>
     <main>
         <section class="partners-hero" id="partnersHero">
             <div class="partners-hero-content">
@@ -42,7 +63,7 @@
     </main>
 
     <script src="images/responsive.js?v=20261029a"></script>
-    <script src="common.min.js?v=20261103o"></script>
+    <script src="common.min.js?v=20261114a"></script>
     <script>
         try { injectLayout('partners'); } catch(e) { console.warn('布局注入失败:', e); }
         if (typeof SITE_DATA === 'undefined') { console.warn('common.js 未加载'); } else {

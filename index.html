@@ -7,7 +7,6 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="theme-color" content="#0f172a">
-    <meta name="baidu-site-verification" content="codeva-Hr5P1vOXal" />
     <title>极鱼社 SwiftFishLab - Minecraft 综合开发团队</title>
     <meta name="description" content="极鱼社（SwiftFishLab）成立于2021年，专注MC皮肤、建筑、Addon与Vocaloid音乐企划，擅长建筑还原、全版本存档修复、拼豆像素画图纸及原创皮肤绘制。在MC中国版下载量超2000万，订阅20万+，上架组件1000+，同时承接资源定制与代投合作。">
     <meta name="keywords" content="极鱼社,SwiftFishLab,Swift Fish Lab,Minecraft,我的世界,MC皮肤定制,MC皮肤,皮肤代投,MC建筑,古建筑,现代建筑,Addon模组,Addon,拼豆像素画,拼豆图纸,存档转换,全版本存档互通,Vocaloid,音乐企划,我的世界开发团队,MC组件开发,尚国营建,HG Studio,像素画,MC中国版">
@@ -15,10 +14,6 @@
     <meta name="robots" content="index, follow">
     <link rel="icon" href="images/sfllogo.webp">
     <link rel="canonical" href="https://www.swiftfishlab.cn/">
-    <meta name="baidu-site-verification" content="codeva-UTzmSOtPoe" />
-    <meta name="google-site-verification" content="" />
-    <meta name="msvalidate.01" content="" />
-    <meta name="360-site-verification" content="" />
     <meta name="sogou_site_verification" content="XYBvEzMnI7" />
     <meta property="og:type" content="website">
     <meta property="og:title" content="极鱼社 SwiftFishLab - Minecraft综合型开发团队">
@@ -55,6 +50,27 @@
     <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 </head>
 <body class="page-home">
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="#hero" class="nav-logo">
+          <img src="images/sfllogo.webp" alt="极鱼社 SwiftFishLab" class="logo-img">
+        </a>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#hero" class="nav-link active" data-nav="hero">主页</a></li>
+          <li><a href="#works" class="nav-link" data-nav="works">代表作品</a></li>
+          <li><a href="#services" class="nav-link" data-nav="services">业务服务</a></li>
+          <li><a href="#shop" class="nav-link" data-nav="shop">在售资源</a></li>
+          <li><a href="#members" class="nav-link" data-nav="members">成员列表</a></li>
+          <li><a href="#join" class="nav-link" data-nav="join">加入我们</a></li>
+          <li><a href="/partners" class="nav-link" data-nav="partners">合作伙伴</a></li>
+          <li><a href="https://data.swiftfishlab.cn" class="nav-link" target="_blank" rel="noopener" data-nav="data">上架数据</a></li>
+        </ul>
+        <button class="nav-toggle" id="navToggle" aria-label="菜单" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div class="nav-overlay" id="navOverlay"></div>
+    </nav>
     <main>
         <section class="hero" id="hero">
             <div class="hero-bg"></div>
@@ -316,7 +332,7 @@
     </main>
 
     <script src="images/responsive.js?v=20261029a"></script>
-    <script src="common.min.js?v=20261103o"></script>
+    <script src="common.min.js?v=20261114a"></script>
     <script>
         try { if (typeof injectLayout === 'function') injectLayout('hero'); } catch(e) { console.warn('布局注入失败:', e); }
 
