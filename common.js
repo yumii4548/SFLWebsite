@@ -233,7 +233,7 @@
                 '<div class="footer-services"><span class="footer-services-label">服务页面</span>' +
                 '<a href="/skin">皮肤定制</a><a href="/architecture">建筑承包</a><a href="/addon">Addon 组件</a>' +
                 '<a href="/maps">玩法地图</a><a href="/pixel-art">拼豆图纸</a><a href="/vocaloid">音乐企划</a>' +
-                '<a href="/archive-convert">存档互通</a><a href="/partners">合作伙伴</a></div>');
+                '<a href="/archive-convert">存档互通</a></div>');
         } catch (e) { console.warn('服务页脚注入失败:', e); }
     }
     injectServices();
